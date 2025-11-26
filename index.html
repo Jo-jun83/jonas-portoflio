@@ -53,61 +53,63 @@
 
   <main class="max-w-5xl mx-auto px-4 pt-10 pb-16">
     <!-- Hero -->
-    <section class="flex flex-col md:flex-row gap-10 items-center md:items-start">
+    <section class="flex flex-col md:flex-row gap-10 items-center md:items-start mb-8">
       <div class="flex-1">
-        <p class="text-sm uppercase tracking-[0.2em] text-sky-600 dark:text-sky-400 mb-3">
+        <p class="text-sm uppercase tracking-[0.2em] text-sky-600 dark:text-sky-400 mb-3 font-semibold">
           Développeur Fullstack · Alternance / CDI
         </p>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 leading-tight">
           Développeur Fullstack<br class="hidden sm:block" />
           formé à <span class="bg-gradient-to-r from-sky-500 to-purple-500 bg-clip-text text-transparent">Holberton School</span>
         </h1>
-        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mb-6 max-w-xl">
+        <p class="text-base sm:text-lg text-slate-700 dark:text-slate-200 mb-8 max-w-xl leading-relaxed">
           Reconverti dans le développement web, je construis des applications complètes, 
           du back-end au front-end, avec un vrai souci de qualité, de sécurité et de maintenabilité.
         </p>
 
-        <div class="flex flex-wrap gap-3 mb-6">
-          <a href="projects.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-sm font-medium shadow-sm">
-            Voir mes projets
-            <span>↗</span>
-          </a>
-          <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:border-sky-500">
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href="#contact" class="btn-primary">
+            <span>✉</span>
             Me contacter
           </a>
-          <a href="assets/cv/jonas-jungling-cv.pdf" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:border-sky-500">
+          <a href="projects.html" class="btn-secondary">
+            Voir mes projets
+            <span>→</span>
+          </a>
+          <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-ghost" download>
+            <span>📄</span>
             Télécharger mon CV
           </a>
         </div>
 
-        <div class="flex flex-wrap gap-2 text-xs text-slate-500 dark:text-slate-400">
-          <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">C</span>
-          <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">JavaScript</span>
-          <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">PHP</span>
-          <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">SQL / MySQL</span>
-          <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">Flask</span>
-          <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">React / Next.js</span>
-          <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">Docker</span>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="badge-tech">C</span>
+          <span class="badge-tech">JavaScript</span>
+          <span class="badge-tech">PHP</span>
+          <span class="badge-tech">SQL / MySQL</span>
+          <span class="badge-tech">Flask</span>
+          <span class="badge-tech">React / Next.js</span>
+          <span class="badge-tech">Docker</span>
         </div>
       </div>
 
       <div class="w-full max-w-xs md:max-w-sm">
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 shadow-sm p-4">
-          <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-[0.2em]">
+        <div class="rounded-2xl border-2 border-slate-200 dark:border-slate-800 bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800/60 shadow-xl p-6">
+          <p class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-[0.2em]">
             En bref
           </p>
-          <ul class="space-y-3 text-sm">
-            <li class="flex items-start gap-2">
-              <span class="mt-1">💼</span>
-              <span>Recherche <strong>alternance ou CDI</strong> en développement web / fullstack.</span>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start gap-3">
+              <span class="text-xl mt-0.5">💼</span>
+              <span class="text-slate-700 dark:text-slate-200">Recherche <strong class="text-sky-600 dark:text-sky-400">alternance ou CDI</strong> en développement web / fullstack.</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="mt-1">🏫</span>
-              <span>Formé à <strong>Holberton School</strong> (C, algorithmie, systèmes, web, réseau).</span>
+            <li class="flex items-start gap-3">
+              <span class="text-xl mt-0.5">🏫</span>
+              <span class="text-slate-700 dark:text-slate-200">Formé à <strong>Holberton School</strong> (C, algorithmie, systèmes, web, réseau).</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="mt-1">🚀</span>
-              <span>Expérience sur des projets concrets : <strong>MoveByChloé, HBnB, simple_shell, printf</strong>, etc.</span>
+            <li class="flex items-start gap-3">
+              <span class="text-xl mt-0.5">🚀</span>
+              <span class="text-slate-700 dark:text-slate-200">Expérience sur des projets concrets : <strong>MoveByChloé, HBnB, simple_shell, printf</strong>, etc.</span>
             </li>
           </ul>
         </div>
@@ -115,37 +117,39 @@
     </section>
 
     <!-- Compétences -->
-    <section class="mt-14" id="skills">
-      <h2 class="text-xl font-semibold mb-4">Compétences</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5">
-          <h3 class="text-sm font-semibold mb-3 text-slate-700 dark:text-slate-200">Langages & Web</h3>
-          <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1">
+    <section class="section-spacing" id="skills">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl sm:text-3xl font-bold">Compétences</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 hover:shadow-lg transition-shadow duration-200">
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Langages & Web</h3>
+          <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-2 leading-relaxed">
             <li>• C, JavaScript, PHP, SQL, Bash</li>
             <li>• HTML5, CSS3, Tailwind CSS</li>
             <li>• Notions : TypeScript (selon projets), Python</li>
           </ul>
         </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5">
-          <h3 class="text-sm font-semibold mb-3 text-slate-700 dark:text-slate-200">Frameworks & Outils</h3>
-          <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 hover:shadow-lg transition-shadow duration-200">
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Frameworks & Outils</h3>
+          <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-2 leading-relaxed">
             <li>• Flask, React / Next.js</li>
             <li>• MySQL</li>
             <li>• Git, GitHub, Docker, Linux</li>
             <li>• Netlify (hébergement statique)</li>
           </ul>
         </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5">
-          <h3 class="text-sm font-semibold mb-3 text-slate-700 dark:text-slate-200">Backend & API</h3>
-          <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 hover:shadow-lg transition-shadow duration-200">
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Backend & API</h3>
+          <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-2 leading-relaxed">
             <li>• Conception et développement d’API REST</li>
             <li>• Authentification (JWT), gestion des rôles</li>
             <li>• Organisation en architecture claire et maintenable</li>
           </ul>
         </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5">
-          <h3 class="text-sm font-semibold mb-3 text-slate-700 dark:text-slate-200">Fondamentaux & Systèmes</h3>
-          <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 hover:shadow-lg transition-shadow duration-200">
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Fondamentaux & Systèmes</h3>
+          <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-2 leading-relaxed">
             <li>• Programmation bas niveau en C</li>
             <li>• Notions de réseau : TCP/IP, modèle OSI</li>
             <li>• Environnements Linux / Shell</li>
@@ -202,19 +206,46 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="mt-14">
-      <h2 class="text-xl font-semibold mb-4">Contact</h2>
-      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 space-y-3 text-sm text-slate-700 dark:text-slate-200">
-        <p>📍 Basé en France, ouvert au télétravail et aux opportunités hybrides.</p>
-        <p>📧 <a href="mailto:jonas.jungling@holbertonstudents.com" class="text-sky-600 dark:text-sky-400 hover:underline">jonas.jungling@holbertonstudents.com</a></p>
-        <p>🔗 <a href="https://www.linkedin.com/in/jonas-jungling" target="_blank" class="text-sky-600 dark:text-sky-400 hover:underline">Profil LinkedIn</a></p>
-        <p>🐙 <a href="https://github.com/Jo-jun83" target="_blank" class="text-sky-600 dark:text-sky-400 hover:underline">GitHub</a></p>
+    <section id="contact" class="section-spacing">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6">Contact</h2>
+      <div class="rounded-2xl border-2 border-sky-200 dark:border-sky-900 bg-gradient-to-br from-sky-50 to-white dark:from-slate-900 dark:to-slate-800 p-8 shadow-xl">
+        <p class="text-base text-slate-700 dark:text-slate-200 mb-6 leading-relaxed">
+          <strong>Disponible immédiatement</strong> pour une alternance ou un CDI en développement fullstack. 
+          Basé en France, ouvert au télétravail et aux opportunités hybrides.
+        </p>
+        <div class="space-y-4 text-sm text-slate-700 dark:text-slate-200">
+          <p class="flex items-center gap-3">
+            <span class="text-xl">📧</span>
+            <a href="mailto:jonas.jungling@holbertonstudents.com" class="text-sky-600 dark:text-sky-400 hover:underline font-medium">jonas.jungling@holbertonstudents.com</a>
+          </p>
+          <p class="flex items-center gap-3">
+            <span class="text-xl">🔗</span>
+            <a href="https://www.linkedin.com/in/jonas-jungling" target="_blank" class="text-sky-600 dark:text-sky-400 hover:underline font-medium">Profil LinkedIn</a>
+          </p>
+          <p class="flex items-center gap-3">
+            <span class="text-xl">🐙</span>
+            <a href="https://github.com/Jo-jun83" target="_blank" class="text-sky-600 dark:text-sky-400 hover:underline font-medium">GitHub</a>
+          </p>
+        </div>
+        <div class="mt-8 pt-6 border-t border-sky-200 dark:border-sky-900">
+          <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-primary" download>
+            <span>📄</span>
+            Télécharger mon CV
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 dark:border-slate-800 py-4 text-center text-xs text-slate-500 dark:text-slate-400">
-    © <span id="year"></span> Jonas Jungling — Portfolio.
+  <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
+    <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+    </p>
+    <div class="flex items-center justify-center gap-4 text-xs">
+      <a href="projects.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Projets</a>
+      <a href="about.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">À propos</a>
+      <a href="#contact" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Contact</a>
+    </div>
   </footer>
 
   <script src="assets/script.js"></script>

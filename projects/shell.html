@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Shell — Projet | Jonas Jungling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>tailwind.config={darkMode:"class"}</script>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-100">
+
+<header class="sticky top-0 backdrop-blur bg-slate-900/60 border-b border-slate-800">
+  <nav class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="../projects.html" class="hover:text-sky-400 text-sm">← Retour</a>
+    <p class="text-xs text-slate-400">Projet détaillé</p>
+    <button id="theme-toggle">🌓</button>
+  </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-4 py-12 space-y-12">
+
+<section>
+  <h1 class="text-3xl font-bold mb-1">Simple Shell</h1>
+  <p class="text-sm text-slate-400 mb-6">2024–2025 · Projet bas niveau Holberton</p>
+</section>
+
+
+<section class="space-y-3 leading-relaxed text-sm">
+  <h2 class="text-xl font-semibold">Résumé</h2>
+  <p>
+    Développement d’un interpréteur de commandes UNIX fonctionnant en mode
+    interactif et non-interactif. Il gère l’exécution via fork/execvp, les variables
+    d’environnement, le PATH et le parsing des commandes.
+  </p>
+</section>
+
+
+<section class="space-y-3 text-sm">
+  <h2 class="text-xl font-semibold">Fonctionnalités</h2>
+  <ul class="list-disc pl-5 space-y-1">
+    <li>Mode interactif & non-interactif (pipe | script)</li>
+    <li>Fork + execvp + gestion d'erreurs système</li>
+    <li>Tokenisation & parsing des commandes</li>
+    <li>Variables PATH & builtins essentiels</li>
+  </ul>
+</section>
+
+
+<section class="space-y-3">
+  <h2 class="text-xl font-semibold">Stack</h2>
+  <div class="flex flex-wrap gap-2 text-xs">
+    <span class="badge-tech">C</span>
+    <span class="badge-tech">Linux</span>
+    <span class="badge-tech">Shell</span>
+    <span class="badge-tech">Syscalls</span>
+  </div>
+</section>
+
+
+<section class="pt-6 flex gap-3">
+  <a href="https://github.com/Jo-jun83/holbertonschool-simple_shell" target="_blank"
+  class="px-4 py-2 border rounded-full text-sm hover:border-sky-500">
+    GitHub ↗
+  </a>
+</section>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

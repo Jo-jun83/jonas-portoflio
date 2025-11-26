@@ -24,7 +24,7 @@ function setTheme(theme) {
   }
 }
 
-// Initialisation du thème
+// Initialisation du thème au chargement immédiat (évite le flash)
 (function initTheme() {
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme === 'dark' || storedTheme === 'light') {
@@ -48,3 +48,27 @@ const yearSpan = document.getElementById('year');
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
+
+// Animations au scroll (fade-up)
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-fade-up');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+// Observer les sections et cartes
+document.addEventListener('DOMContentLoaded', () => {
+  const elementsToAnimate = document.querySelectorAll('section, .project-card, article');
+  elementsToAnimate.forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+});
