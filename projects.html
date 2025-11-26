@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projets - Jonas Jungling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['system-ui', 'Segoe UI', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+  <!-- Navbar -->
+  <header class="border-b border-slate-200/70 dark:border-slate-800/80 bg-white/80 dark:bg-slate-950/80 backdrop-blur sticky top-0 z-30">
+    <nav class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-sky-500 to-purple-500 flex items-center justify-center text-white font-semibold">
+          J
+        </div>
+        <div class="leading-tight">
+          <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-4">
+        <a href="projects.html" class="text-sm text-sky-600 dark:text-sky-400 font-medium">Projets</a>
+        <a href="about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
+        <a href="index.html#contact" class="hidden sm:inline text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Contact</a>
+
+        <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
+          <span id="theme-toggle-light" class="hidden">🌞</span>
+          <span id="theme-toggle-dark" class="hidden">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 pt-10 pb-16">
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold mb-2">Projets</h1>
+      <p class="text-sm text-slate-600 dark:text-slate-300">
+        Une sélection de projets réalisés en formation et en autonomie, couvrant le bas niveau, le back-end, le front-end et les applications web complètes.
+      </p>
+    </header>
+
+    <div class="space-y-6">
+      <!-- MoveByChloé -->
+      <article class="project-card">
+        <div class="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <h2 class="project-title">MoveByChloé</h2>
+            <p class="project-meta">2024 – 2025 · Projet portfolio Holberton</p>
+          </div>
+        </div>
+        <p class="project-text">
+          MoveByChloé est une plateforme de réservation de cours de sport pour une coach. 
+          Le site permet aux utilisateurs de consulter les cours, réserver en ligne, et à l’administratrice de gérer 
+          les plannings, les utilisateurs et les tarifs via un back-office dédié.
+        </p>
+        <p class="project-text mt-2">
+          Le projet met l’accent sur une architecture claire (front / back / base de données), 
+          la sécurité (authentification JWT, gestion des rôles) et une expérience utilisateur fluide.
+        </p>
+        <p class="project-text mt-2">
+          <strong>Difficulté notable :</strong> conception d’une API REST robuste et sécurisée (gestion des rôles, 
+          tokens, validations) tout en gardant un front moderne et réactif.
+        </p>
+        <div class="project-tags">
+          <span class="badge-tech">Flask</span>
+          <span class="badge-tech">MySQL</span>
+          <span class="badge-tech">React / Next.js</span>
+          <span class="badge-tech">JWT</span>
+          <span class="badge-tech">Tailwind CSS</span>
+        </div>
+      </article>
+
+      <!-- HBnB -->
+      <article class="project-card">
+        <div class="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <h2 class="project-title">HBnB</h2>
+            <p class="project-meta">2025 · Holberton School</p>
+          </div>
+        </div>
+        <p class="project-text">
+          HBnB est une application web inspirée d’Airbnb, permettant de lister, rechercher et gérer des hébergements.
+          Le back-end repose sur une API REST développée avec Flask et SQLAlchemy pour la gestion des utilisateurs, des annonces,
+          des équipements (amenities) et des avis.
+        </p>
+        <p class="project-text mt-2">
+          <strong>Difficulté notable :</strong> modélisation des données (relations entre utilisateurs, lieux, équipements, avis) 
+          et mise en place de routes d’API cohérentes et testables.
+        </p>
+        <div class="project-tags">
+          <span class="badge-tech">Flask</span>
+          <span class="badge-tech">SQLAlchemy</span>
+          <span class="badge-tech">API REST</span>
+          <span class="badge-tech">MySQL</span>
+        </div>
+      </article>
+
+      <!-- Simple Shell -->
+      <article class="project-card">
+        <div class="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <h2 class="project-title">Simple Shell</h2>
+            <p class="project-meta">2024 – 2025 · Holberton School</p>
+          </div>
+          <a href="https://github.com/Jo-jun83/holbertonschool-simple_shell" target="_blank" class="project-link">
+            Voir sur GitHub ↗
+          </a>
+        </div>
+        <p class="project-text">
+          Implémentation d’un interpréteur de commandes UNIX simplifié, capable de fonctionner en mode interactif et non-interactif.
+          Le programme gère l’exécution de commandes, les chemins, certaines erreurs et le parsing de base.
+        </p>
+        <p class="project-text mt-2">
+          <strong>Difficulté notable :</strong> gestion fine de la mémoire, des processus (fork/exec), 
+          et des erreurs d’exécution dans un environnement bas niveau.
+        </p>
+        <div class="project-tags">
+          <span class="badge-tech">C</span>
+          <span class="badge-tech">Linux</span>
+          <span class="badge-tech">Shell</span>
+        </div>
+      </article>
+
+      <!-- Printf -->
+      <article class="project-card">
+        <div class="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <h2 class="project-title">_printf</h2>
+            <p class="project-meta">nov. 2024 · Holberton School</p>
+          </div>
+          <a href="https://github.com/Jo-jun83/holbertonschool-printf" target="_blank" class="project-link">
+            Voir sur GitHub ↗
+          </a>
+        </div>
+        <p class="project-text">
+          Recréation de la fonction <code>printf</code> en C, avec gestion de plusieurs spécificateurs de format 
+          et écriture d’une page de manuel (manpage) décrivant le comportement de la fonction.
+        </p>
+        <p class="project-text mt-2">
+          <strong>Difficulté notable :</strong> gestion des arguments variadiques, du formatage conditionnel, 
+          et structuration du code pour rester lisible et maintenable.
+        </p>
+        <div class="project-tags">
+          <span class="badge-tech">C</span>
+          <span class="badge-tech">Bas niveau</span>
+          <span class="badge-tech">Variadic functions</span>
+        </div>
+      </article>
+
+      <!-- O'Scour -->
+      <article class="project-card">
+        <div class="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <h2 class="project-title">O’Scour</h2>
+            <p class="project-meta">2023 · Formation O’Clock</p>
+          </div>
+          <!-- Lien GitHub ou démo à ajouter quand tu l'auras -->
+        </div>
+        <p class="project-text">
+          O’Scour est un jeu d’énigmes en ligne réalisé dans le cadre de ma formation chez O’Clock. 
+          Malgré un temps de développement limité (deux semaines de phase de code, un mois au total), 
+          le projet offre une expérience ludique et engageante pour les joueurs qui aiment se creuser les méninges.
+        </p>
+        <p class="project-text mt-2">
+          <strong>Difficulté notable :</strong> concevoir une mécanique de jeu cohérente, 
+          gérer les états côté front et mettre en place un back-office suffisamment souple pour faire évoluer les énigmes.
+        </p>
+        <div class="project-tags">
+          <span class="badge-tech">PHP</span>
+          <span class="badge-tech">Symfony</span>
+          <span class="badge-tech">JavaScript</span>
+          <span class="badge-tech">CSS</span>
+          <span class="badge-tech">HTML</span>
+        </div>
+      </article>
+
+      <!-- O'Flix -->
+      <article class="project-card">
+        <div class="flex items-start justify-between gap-3 mb-2">
+          <div>
+            <h2 class="project-title">O’Flix</h2>
+            <p class="project-meta">2023 · Formation O’Clock</p>
+          </div>
+          <!-- Lien GitHub ou démo à ajouter quand tu l'auras -->
+        </div>
+        <p class="project-text">
+          O’Flix est un site web dédié aux films et aux séries. 
+          Les utilisateurs peuvent explorer un catalogue, ajouter des œuvres en favoris et partager leurs avis. 
+          Un back-office permet de gérer les contenus et les utilisateurs.
+        </p>
+        <p class="project-text mt-2">
+          Le contenu est généré via des fixtures afin de proposer un environnement de démonstration complet et cohérent.
+        </p>
+        <div class="project-tags">
+          <span class="badge-tech">PHP</span>
+          <span class="badge-tech">Symfony</span>
+          <span class="badge-tech">CSS</span>
+          <span class="badge-tech">HTML</span>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-4 text-center text-xs text-slate-500 dark:text-slate-400">
+    © <span id="year"></span> Jonas Jungling — Portfolio.
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

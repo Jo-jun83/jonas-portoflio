@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <title>À propos - Jonas Jungling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['system-ui', 'Segoe UI', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+  <!-- Navbar -->
+  <header class="border-b border-slate-200/70 dark:border-slate-800/80 bg-white/80 dark:bg-slate-950/80 backdrop-blur sticky top-0 z-30">
+    <nav class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-sky-500 to-purple-500 flex items-center justify-center text-white font-semibold">
+          J
+        </div>
+        <div class="leading-tight">
+          <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-4">
+        <a href="projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
+        <a href="about.html" class="text-sm text-sky-600 dark:text-sky-400 font-medium">À propos</a>
+        <a href="index.html#contact" class="hidden sm:inline text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Contact</a>
+
+        <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
+          <span id="theme-toggle-light" class="hidden">🌞</span>
+          <span id="theme-toggle-dark" class="hidden">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 pt-10 pb-16">
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold mb-2">À propos</h1>
+      <p class="text-sm text-slate-600 dark:text-slate-300">
+        Parcours, reconversion et manière de travailler.
+      </p>
+    </header>
+
+    <section class="space-y-6 text-sm sm:text-base text-slate-700 dark:text-slate-200">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5">
+        <h2 class="text-lg font-semibold mb-2">Qui je suis</h2>
+        <p class="mb-2">
+          Je m’appelle Jonas, développeur fullstack en reconversion professionnelle. 
+          Après une première carrière en dehors de la tech, j’ai choisi de me former sérieusement au développement 
+          pour en faire mon métier à long terme.
+        </p>
+        <p>
+          Ce qui me motive : construire des applications utiles, bien pensées, 
+          avec un code propre et une architecture sur laquelle on peut s’appuyer.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5">
+        <h2 class="text-lg font-semibold mb-2">Formation & reconversion</h2>
+        <p class="mb-2">
+          J’ai d’abord découvert le développement web lors d’une formation chez O’Clock, 
+          où j’ai réalisé des projets comme <strong>O’Scour</strong> et <strong>O’Flix</strong> en PHP/Symfony.
+        </p>
+        <p class="mb-2">
+          Ensuite, j’ai intégré <strong>Holberton School</strong>, une formation intensive orientée projet, 
+          où j’ai approfondi :
+        </p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>la programmation en C et les notions bas niveau ;</li>
+          <li>les systèmes et le shell (projet simple_shell) ;</li>
+          <li>la conception d’API back-end (Flask, MySQL, SQLAlchemy) ;</li>
+          <li>les bonnes pratiques de sécurité (authentification, JWT, rôles).</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5">
+        <h2 class="text-lg font-semibold mb-2">Projets marquants</h2>
+        <p class="mb-2">
+          Parmi les projets qui ont le plus marqué mon parcours :
+        </p>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>MoveByChloé</strong> : une vraie application métier, avec back-office, 
+            gestion des utilisateurs, des réservations et des tarifs.</li>
+          <li><strong>HBnB</strong> : modélisation d’un mini-Airbnb avec API REST.</li>
+          <li><strong>simple_shell</strong> et <strong>_printf</strong> : projets en C qui m’ont appris 
+            à être rigoureux sur la mémoire, la logique et la structure du code.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5">
+        <h2 class="text-lg font-semibold mb-2">Ce que je recherche</h2>
+        <p class="mb-2">
+          Je suis à la recherche d’une <strong>alternance</strong> ou d’un <strong>CDI</strong> 
+          en développement web / fullstack.
+        </p>
+        <p>
+          J’aime particulièrement :
+        </p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>travailler sur des API et des back-ends robustes ;</li>
+          <li>comprendre les besoins métier pour adapter l’architecture ;</li>
+          <li>améliorer progressivement la qualité (tests, refactor, sécurité).</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5">
+        <h2 class="text-lg font-semibold mb-2">Me contacter</h2>
+        <p class="mb-2">
+          Si vous pensez que mon profil peut correspondre à vos besoins ou à votre équipe, 
+          je serai ravi d’échanger.
+        </p>
+        <p>📧 <a href="mailto:jonas.jungling@holbertonstudents.com" class="text-sky-600 dark:text-sky-400 hover:underline">jonas.jungling@holbertonstudents.com</a></p>
+        <p>🔗 <a href="https://www.linkedin.com/in/jonas-jungling" target="_blank" class="text-sky-600 dark:text-sky-400 hover:underline">LinkedIn</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-4 text-center text-xs text-slate-500 dark:text-slate-400">
+    © <span id="year"></span> Jonas Jungling — Portfolio.
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
