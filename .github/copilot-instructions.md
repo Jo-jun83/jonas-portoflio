@@ -52,16 +52,20 @@ Définies dans `assets/styles.css` avec `@apply` Tailwind :
 - `.badge-backend` : badge vert pour technos backend
 - `.badge-database` : badge violet pour bases de données
 - `.badge-tool` : badge ambre pour outils/langages
+- `.tech-icon-badge` : badge avec icône de techno (pour cartes visuelles)
 
 ### Boutons
 
 - `.btn-primary` : bouton CTA principal avec gradient sky-500 + hover scale
 - `.btn-secondary` : bouton secondaire avec bordure
 - `.btn-ghost` : bouton fantôme pour actions tertiaires
+- `.btn-card-primary` : bouton primaire pour cartes projet visuelles
+- `.btn-card-secondary` : bouton icône secondaire pour cartes projet
 
 ### Cartes et Layouts
 
-- `.project-card` : cartes de projet avec hover effect et shadow
+- `.project-card` : cartes de projet simples avec hover effect et shadow
+- `.project-card-visual` : **cartes visuelles avec thumbnail** pour page projets (grid layout)
 - `.project-title`, `.project-meta`, `.project-text` : typographie standardisée
 - `.project-tags` : container flex pour les badges
 - `.project-hero` : bannière hero pour pages détail projet
@@ -70,11 +74,45 @@ Définies dans `assets/styles.css` avec `@apply` Tailwind :
 - `.cards-grid` : grille 2 colonnes responsive
 - `.cards-grid-3` : grille 3 colonnes responsive (2 sur tablet, 3 sur desktop)
 
+### Filtres et interactions
+
+- `.filter-btn` : boutons de filtre pour catégoriser les projets
+- `.filter-btn.active` : état actif du filtre avec gradient et shadow
+
 ### Animations
 
 - `.animate-fade-up` : animation entrée depuis le bas (gérée par Intersection Observer dans script.js)
 
-**Quand ajouter une nouvelle carte projet** : utiliser `.project-card` + `.project-tags` + badges colorés appropriés
+### Utilitaires
+
+- `.line-clamp-2` : limitation texte à 2 lignes avec ellipse
+
+**Structure carte projet visuelle** :
+
+```html
+<article class="project-card-visual group" data-category="fullstack">
+  <div class="relative overflow-hidden rounded-t-2xl aspect-video">
+    <img src="assets/img/projet.png" alt="Projet" />
+    <div class="absolute top-3 right-3">
+      <span class="badge">Badge optionnel</span>
+    </div>
+  </div>
+  <div class="p-6">
+    <h2>Titre</h2>
+    <p class="line-clamp-2">Description courte</p>
+    <div class="flex gap-2">
+      <span class="tech-icon-badge">
+        <img src="assets/logo/tech.png" class="w-4 h-4" />
+        Tech
+      </span>
+    </div>
+    <div class="flex gap-2">
+      <a href="projects/detail.html" class="btn-card-primary flex-1">Voir →</a>
+      <a href="#" class="btn-card-secondary">🎥</a>
+    </div>
+  </div>
+</article>
+```
 
 ## Palette de couleurs
 
@@ -88,13 +126,15 @@ Définies dans `assets/styles.css` avec `@apply` Tailwind :
 
 ### Ajouter un projet
 
-1. **Page liste** (`projects.html`) : dupliquer un `<article class="project-card">` avec :
+1. **Page liste** (`projects.html`) : dupliquer un `<article class="project-card-visual">` avec :
 
-   - Titre dans `.project-title`
-   - Date et contexte dans `.project-meta`
-   - Description dans `.project-text`
-   - Technologies dans `.project-tags` avec badges colorés appropriés
-   - Boutons d'action avec `.btn-secondary` et `.btn-ghost`
+   - Image/thumbnail dans le conteneur `aspect-video` en haut
+   - Badge optionnel (Flagship, Hardcore, etc.) en position absolute
+   - Titre + année dans l'en-tête
+   - Description courte (2 lignes max avec `line-clamp-2`)
+   - Technologies avec `.tech-icon-badge` + logo dans `assets/logo/`
+   - Boutons : `.btn-card-primary` pour détail + `.btn-card-secondary` pour démo/GitHub
+   - Attribut `data-category` pour le système de filtres
 
 2. **Page d'accueil** (`index.html`) : mettre à jour les 3 projets mis en avant dans `.cards-grid-3`
 

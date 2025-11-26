@@ -2,7 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>Projets - Jonas Jungling</title>
+  <title>Projets — Jonas Jungling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,9 +36,8 @@
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="projects.html" class="text-sm text-sky-600 dark:text-sky-400 font-medium">Projets</a>
+        <a href="projects.html" class="text-sm text-slate-900 dark:text-slate-100 font-medium">Projets</a>
         <a href="about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
-        <a href="index.html#contact" class="hidden sm:inline text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Contact</a>
 
         <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
           <span id="theme-toggle-light" class="hidden">🌞</span>
@@ -48,245 +47,353 @@
     </nav>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4 pt-10 pb-16">
-    <header class="mb-10">
-      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Projets</h1>
-      <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed max-w-3xl">
-        Une sélection de projets réalisés en formation et en autonomie, couvrant le bas niveau, le back-end, le front-end et les applications web complètes.
+  <main class="max-w-6xl mx-auto px-4 pt-12 pb-20">
+    <!-- Header -->
+    <div class="text-center mb-16 animate-fade-up">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-sky-600 to-purple-600 bg-clip-text text-transparent">
+        Mes Projets
+      </h1>
+      <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+        Sélection de projets développés en formation et en autonomie
       </p>
-    </header>
+    </div>
 
-    <div class="space-y-8">
+    <!-- Filtres -->
+    <div class="flex flex-wrap gap-3 justify-center mb-12 animate-fade-up" style="animation-delay: 0.1s">
+      <button class="filter-btn active" data-filter="all">
+        Tous les projets
+      </button>
+      <button class="filter-btn" data-filter="fullstack">
+        Fullstack
+      </button>
+      <button class="filter-btn" data-filter="backend">
+        Backend
+      </button>
+      <button class="filter-btn" data-filter="low-level">
+        Bas niveau
+      </button>
+    </div>
+
+    <!-- Grid de projets -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+      
       <!-- MoveByChloé -->
-      <article class="project-card">
-        <div class="flex items-start justify-between gap-3 mb-3">
-          <div>
-            <h2 class="project-title mb-1">MoveByChloé</h2>
-            <p class="project-meta">2024 – 2025 · Projet portfolio Holberton</p>
+      <article class="project-card-visual group animate-fade-up" data-category="fullstack" style="animation-delay: 0.15s">
+        <div class="relative overflow-hidden rounded-t-2xl bg-slate-200 dark:bg-slate-800 aspect-video">
+          <img src="assets/img/movebychloe.png" alt="MoveByChloé" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute top-3 right-3">
+            <span class="px-2.5 py-1 bg-green-500/90 text-white text-xs font-semibold rounded-full backdrop-blur">
+              ⭐ Flagship
+            </span>
           </div>
         </div>
-        <p class="project-text mb-3">
-          MoveByChloé est une plateforme de réservation de cours de sport pour une coach. 
-          Le site permet aux utilisateurs de consulter les cours, réserver en ligne, et à l'administratrice de gérer 
-          les plannings, les utilisateurs et les tarifs via un back-office dédié.
-        </p>
-        <p class="project-text mb-3">
-          Le projet met l'accent sur une architecture claire (front / back / base de données), 
-          la sécurité (authentification JWT, gestion des rôles) et une expérience utilisateur fluide.
-        </p>
-        <p class="project-text mb-4">
-          <strong>Difficulté notable :</strong> conception d'une API REST robuste et sécurisée (gestion des rôles, 
-          tokens, validations) tout en gardant un front moderne et réactif.
-        </p>
-        <div class="project-tags">
-          <span class="badge-backend">Flask</span>
-          <span class="badge-database">MySQL</span>
-          <span class="badge-frontend">React / Next.js</span>
-          <span class="badge-tool">JWT</span>
-          <span class="badge-frontend">Tailwind CSS</span>
-        </div>
-        <div class="flex flex-wrap gap-3 mt-5 pt-5 border-t border-slate-200 dark:border-slate-800">
-          <a href="projects/movebychloe.html" class="btn-secondary">
-            📄 Voir le projet
-          </a>
-          <a href="https://youtu.be/0WCLshtnnZY" target="_blank" class="btn-ghost">
-            ▶ Voir la démo
-          </a>
-        </div>
-      </article>
-
-      <!-- HBnB -->
-      <article class="project-card">
-        <div class="flex items-start justify-between gap-3 mb-3">
-          <div>
-            <h2 class="project-title mb-1">HBnB</h2>
-            <p class="project-meta">2025 · Holberton School</p>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 group-hover:text-sky-600 transition">
+              MoveByChloé
+            </h2>
+            <span class="text-xs text-slate-500 dark:text-slate-400">2024–2025</span>
           </div>
-        </div>
-        <p class="project-text mb-3">
-          HBnB est une application web inspirée d'Airbnb, permettant de lister, rechercher et gérer des hébergements.
-          Le back-end repose sur une API REST développée avec Flask et SQLAlchemy pour la gestion des utilisateurs, des annonces,
-          des équipements (amenities) et des avis.
-        </p>
-        <p class="project-text mb-4">
-          <strong>Difficulté notable :</strong> modélisation des données (relations entre utilisateurs, lieux, équipements, avis) 
-          et mise en place de routes d'API cohérentes et testables.
-        </p>
-        <div class="project-tags">
-          <span class="badge-backend">Flask</span>
-          <span class="badge-database">SQLAlchemy</span>
-          <span class="badge-backend">API REST</span>
-          <span class="badge-database">MySQL</span>
-        </div>
-        <div class="flex flex-wrap gap-3 mt-5 pt-5 border-t border-slate-200 dark:border-slate-800">
-          <a href="projects/hbnb.html" class="btn-secondary">
-            📄 Voir le projet
-          </a>
-          <a href="https://github.com/Jo-jun83/holbertonschool-hbnb/tree/main" target="_blank" class="btn-ghost">
-            🐙 Voir sur GitHub
-          </a>
-        </div>
-      </article>
-
-      <!-- Simple Shell -->
-      <article class="project-card">
-        <div class="flex items-start justify-between gap-3 mb-3">
-          <div>
-            <h2 class="project-title mb-1">Simple Shell</h2>
-            <p class="project-meta">2024 – 2025 · Holberton School</p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">
+            Plateforme de réservation de cours sportifs avec paiement intégré et back-office complet
+          </p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-icon-badge">
+              <img src="assets/logo/react.png" alt="React" class="w-4 h-4" />
+              React
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/nextjs.png" alt="Next.js" class="w-4 h-4" />
+              Next.js
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/flask.png" alt="Flask" class="w-4 h-4" />
+              Flask
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/mysql.png" alt="MySQL" class="w-4 h-4" />
+              MySQL
+            </span>
           </div>
-        </div>
-        <p class="project-text mb-3">
-          Implémentation d'un interpréteur de commandes UNIX simplifié, capable de fonctionner en mode interactif et non-interactif.
-          Le programme gère l'exécution de commandes, les chemins, certaines erreurs et le parsing de base.
-        </p>
-        <p class="project-text mb-4">
-          <strong>Difficulté notable :</strong> gestion fine de la mémoire, des processus (fork/exec), 
-          et des erreurs d'exécution dans un environnement bas niveau.
-        </p>
-        <div class="project-tags">
-          <span class="badge-tool">C</span>
-          <span class="badge-tool">Linux</span>
-          <span class="badge-tool">Shell</span>
-          <span class="badge-tool">Fork/Exec</span>
-        </div>
-        <div class="flex flex-wrap gap-3 mt-5 pt-5 border-t border-slate-200 dark:border-slate-800">
-          <a href="projects/simple-shell.html" class="btn-secondary">
-            📄 Voir le projet
-          </a>
-          <a href="https://github.com/Jo-jun83/holbertonschool-simple_shell" target="_blank" class="btn-ghost">
-            🐙 Voir sur GitHub
-          </a>
-        </div>
-      </article>
-
-      <!-- Printf -->
-      <article class="project-card">
-        <div class="flex items-start justify-between gap-3 mb-3">
-          <div>
-            <h2 class="project-title mb-1">_printf</h2>
-            <p class="project-meta">nov. 2024 · Holberton School</p>
+          <div class="flex gap-2">
+            <a href="projects/movebychloe.html" class="btn-card-primary flex-1">
+              Voir le projet →
+            </a>
+            <a href="https://youtu.be/0WCLshtnnZY" target="_blank" class="btn-card-secondary">
+              🎥
+            </a>
           </div>
-        </div>
-        <p class="project-text mb-3">
-          Recréation de la fonction <code class="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-sm">printf</code> en C, avec gestion de plusieurs spécificateurs de format 
-          et écriture d'une page de manuel (manpage) décrivant le comportement de la fonction.
-        </p>
-        <p class="project-text mb-4">
-          <strong>Difficulté notable :</strong> gestion des arguments variadiques, du formatage conditionnel, 
-          et structuration du code pour rester lisible et maintenable.
-        </p>
-        <div class="project-tags">
-          <span class="badge-tool">C</span>
-          <span class="badge-tool">Bas niveau</span>
-          <span class="badge-tool">Variadic functions</span>
-          <span class="badge-tool">Manpage</span>
-        </div>
-        <div class="flex flex-wrap gap-3 mt-5 pt-5 border-t border-slate-200 dark:border-slate-800">
-          <a href="projects/printf.html" class="btn-secondary">
-            📄 Voir le projet
-          </a>
-          <a href="https://github.com/Jo-jun83/holbertonschool-printf" target="_blank" class="btn-ghost">
-            🐙 Voir sur GitHub
-          </a>
-        </div>
-      </article>
-
-      <!-- O'Scour -->
-      <article class="project-card">
-        <div class="flex items-start justify-between gap-3 mb-3">
-          <div>
-            <h2 class="project-title mb-1">O'Scour</h2>
-            <p class="project-meta">2023 · Formation O'Clock</p>
-          </div>
-        </div>
-        <p class="project-text mb-3">
-          O'Scour est un jeu d'énigmes en ligne réalisé dans le cadre de ma formation chez O'Clock. 
-          Malgré un temps de développement limité (deux semaines de phase de code, un mois au total), 
-          le projet offre une expérience ludique et engageante pour les joueurs qui aiment se creuser les méninges.
-        </p>
-        <p class="project-text mb-4">
-          <strong>Difficulté notable :</strong> concevoir une mécanique de jeu cohérente, 
-          gérer les états côté front et mettre en place un back-office suffisamment souple pour faire évoluer les énigmes.
-        </p>
-        <div class="project-tags">
-          <span class="badge-backend">PHP</span>
-          <span class="badge-backend">Symfony</span>
-          <span class="badge-frontend">JavaScript</span>
-          <span class="badge-frontend">CSS</span>
-          <span class="badge-frontend">HTML</span>
-        </div>
-        <div class="flex flex-wrap gap-3 mt-5 pt-5 border-t border-slate-200 dark:border-slate-800">
-          <a href="projects/oscour.html" class="btn-secondary">
-            📄 Voir le projet
-          </a>
-          <a href="https://youtu.be/9KFlRwrdzi0" target="_blank" class="btn-ghost">
-            ▶ Voir la démo
-          </a>
         </div>
       </article>
 
       <!-- O'Flix -->
-      <article class="project-card">
-        <div class="flex items-start justify-between gap-3 mb-3">
-          <div>
-            <h2 class="project-title mb-1">O'Flix</h2>
-            <p class="project-meta">2023 · Formation O'Clock</p>
+      <article class="project-card-visual group animate-fade-up" data-category="fullstack" style="animation-delay: 0.2s">
+        <div class="relative overflow-hidden rounded-t-2xl bg-slate-200 dark:bg-slate-800 aspect-video">
+          <img src="assets/img/oflix.jpg" alt="O'Flix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 group-hover:text-sky-600 transition">
+              O'Flix
+            </h2>
+            <span class="text-xs text-slate-500 dark:text-slate-400">2023</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">
+            Catalogue films & séries avec système de favoris, avis et back-office d'administration
+          </p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-icon-badge">
+              <img src="assets/logo/php.png" alt="PHP" class="w-4 h-4" />
+              PHP
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/mysql.png" alt="MySQL" class="w-4 h-4" />
+              MySQL
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/html.png" alt="HTML" class="w-4 h-4" />
+              HTML/CSS
+            </span>
+          </div>
+          <div class="flex gap-2">
+            <a href="projects/oflix.html" class="btn-card-primary flex-1">
+              Voir le projet →
+            </a>
+            <a href="https://youtu.be/y2GlOGNUs5k" target="_blank" class="btn-card-secondary">
+              🎥
+            </a>
           </div>
         </div>
-        <p class="project-text mb-3">
-          O'Flix est un site web dédié aux films et aux séries. 
-          Les utilisateurs peuvent explorer un catalogue, ajouter des œuvres en favoris et partager leurs avis. 
-          Un back-office permet de gérer les contenus et les utilisateurs.
-        </p>
-        <p class="project-text mb-3">
-          Le contenu est généré via des fixtures afin de proposer un environnement de démonstration complet et cohérent.
-        </p>
-        <div class="project-tags">
-          <span class="badge-backend">PHP</span>
-          <span class="badge-backend">Symfony</span>
-          <span class="badge-database">SQL</span>
-          <span class="badge-frontend">CSS</span>
-          <span class="badge-frontend">HTML</span>
+      </article>
+
+      <!-- Simple Shell -->
+      <article class="project-card-visual group animate-fade-up" data-category="low-level" style="animation-delay: 0.25s">
+        <div class="relative overflow-hidden rounded-t-2xl bg-slate-200 dark:bg-slate-800 aspect-video">
+          <img src="assets/img/simple_shell.png" alt="Simple Shell" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute top-3 right-3">
+            <span class="px-2.5 py-1 bg-red-500/90 text-white text-xs font-semibold rounded-full backdrop-blur">
+              🔥 Hardcore
+            </span>
+          </div>
         </div>
-        <div class="flex flex-wrap gap-3 mt-5 pt-5 border-t border-slate-200 dark:border-slate-800">
-          <a href="projects/oflix.html" class="btn-secondary">
-            📄 Voir le projet
-          </a>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 group-hover:text-sky-600 transition">
+              Simple Shell
+            </h2>
+            <span class="text-xs text-slate-500 dark:text-slate-400">2024–2025</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">
+            Interpréteur de commandes UNIX en C avec fork/exec, parsing et gestion mémoire
+          </p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-icon-badge">
+              <img src="assets/logo/c.png" alt="C" class="w-4 h-4" />
+              C
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/linux.jpg" alt="Linux" class="w-4 h-4" />
+              Linux
+            </span>
+          </div>
+          <div class="flex gap-2">
+            <a href="projects/simple-shell.html" class="btn-card-primary flex-1">
+              Voir le projet →
+            </a>
+            <a href="https://github.com/Jo-jun83/holbertonschool-simple_shell" target="_blank" class="btn-card-secondary">
+              🐙
+            </a>
+          </div>
         </div>
       </article>
+
+      <!-- HBnB -->
+      <article class="project-card-visual group animate-fade-up" data-category="backend" style="animation-delay: 0.3s">
+        <div class="relative overflow-hidden rounded-t-2xl bg-gradient-to-br from-blue-500 to-purple-600 aspect-video flex items-center justify-center">
+          <div class="text-center text-white p-6">
+            <div class="text-6xl mb-2">🏠</div>
+            <p class="text-2xl font-bold">HBnB API</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 group-hover:text-sky-600 transition">
+              HBnB
+            </h2>
+            <span class="text-xs text-slate-500 dark:text-slate-400">2025</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">
+            API REST type Airbnb avec Flask, SQLAlchemy et gestion relationnelle complète
+          </p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-icon-badge">
+              <img src="assets/logo/flask.png" alt="Flask" class="w-4 h-4" />
+              Flask
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/sqlalchemy.png" alt="SQLAlchemy" class="w-4 h-4" />
+              SQLAlchemy
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/mysql.png" alt="MySQL" class="w-4 h-4" />
+              MySQL
+            </span>
+          </div>
+          <div class="flex gap-2">
+            <a href="projects/hbnb.html" class="btn-card-primary flex-1">
+              Voir le projet →
+            </a>
+            <a href="https://github.com/Jo-jun83/holbertonschool-hbnb/tree/main" target="_blank" class="btn-card-secondary">
+              🐙
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- _printf -->
+      <article class="project-card-visual group animate-fade-up" data-category="low-level" style="animation-delay: 0.35s">
+        <div class="relative overflow-hidden rounded-t-2xl bg-slate-900 aspect-video flex items-center justify-center p-6">
+          <pre class="text-green-400 text-xs leading-relaxed font-mono"><code>int _printf(const char *format, ...)
+{
+    va_list args;
+    int count = 0;
+    
+    va_start(args, format);
+    // Parse & dispatch...
+    va_end(args);
+    
+    return count;
+}</code></pre>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 group-hover:text-sky-600 transition">
+              _printf
+            </h2>
+            <span class="text-xs text-slate-500 dark:text-slate-400">Nov 2024</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">
+            Recréation de printf en C avec arguments variadiques et parsing de formats
+          </p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-icon-badge">
+              <img src="assets/logo/c.png" alt="C" class="w-4 h-4" />
+              C
+            </span>
+            <span class="badge-tool">va_list</span>
+          </div>
+          <div class="flex gap-2">
+            <a href="projects/printf.html" class="btn-card-primary flex-1">
+              Voir le projet →
+            </a>
+            <a href="https://github.com/Jo-jun83/holbertonschool-printf" target="_blank" class="btn-card-secondary">
+              🐙
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- O'Scour -->
+      <article class="project-card-visual group animate-fade-up" data-category="fullstack" style="animation-delay: 0.4s">
+        <div class="relative overflow-hidden rounded-t-2xl bg-slate-200 dark:bg-slate-800 aspect-video">
+          <img src="assets/img/oscour.jpg" alt="O'Scour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 group-hover:text-sky-600 transition">
+              O'Scour
+            </h2>
+            <span class="text-xs text-slate-500 dark:text-slate-400">2023</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">
+            Jeu d'énigmes web avec système de progression et validation des réponses
+          </p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tech-icon-badge">
+              <img src="assets/logo/php.png" alt="PHP" class="w-4 h-4" />
+              PHP
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/js.jpg" alt="JavaScript" class="w-4 h-4" />
+              JavaScript
+            </span>
+            <span class="tech-icon-badge">
+              <img src="assets/logo/css.png" alt="CSS" class="w-4 h-4" />
+              CSS
+            </span>
+          </div>
+          <div class="flex gap-2">
+            <a href="projects/oscour.html" class="btn-card-primary flex-1">
+              Voir le projet →
+            </a>
+            <a href="https://youtu.be/9KFlRwrdzi0" target="_blank" class="btn-card-secondary">
+              🎥
+            </a>
+          </div>
+        </div>
+      </article>
+
     </div>
 
-    <!-- CTA retour -->
-    <div class="mt-16 pt-8 border-t-2 border-slate-200 dark:border-slate-800 text-center">
-      <p class="text-slate-700 dark:text-slate-200 mb-6">
-        Intéressé par mon profil ? Discutons de votre projet !
-      </p>
-      <div class="flex flex-wrap items-center justify-center gap-4">
+    <!-- CTA Section -->
+    <div class="mt-20 text-center animate-fade-up">
+      <div class="inline-block rounded-2xl border-2 border-sky-200 dark:border-sky-900 bg-gradient-to-br from-sky-50 to-white dark:from-slate-900 dark:to-slate-800 p-8">
+        <h2 class="text-2xl font-bold mb-3">Intéressé par mon profil ?</h2>
+        <p class="text-slate-600 dark:text-slate-300 mb-6 max-w-md">
+          Discutons de vos projets et de la façon dont je peux vous aider
+        </p>
         <a href="index.html#contact" class="btn-primary">
-          ✉ Me contacter
-        </a>
-        <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-secondary" download>
-          📄 Télécharger mon CV
-        </a>
-        <a href="index.html" class="btn-ghost">
-          ← Retour à l'accueil
+          Me contacter
         </a>
       </div>
     </div>
   </main>
 
   <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
-    <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
-    </p>
-    <div class="flex items-center justify-center gap-4 text-xs">
-      <a href="projects.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Projets</a>
-      <a href="about.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">À propos</a>
-      <a href="index.html#contact" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Contact</a>
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="flex justify-center gap-6 mb-4 text-sm">
+        <a href="index.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Accueil</a>
+        <a href="projects.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Projets</a>
+        <a href="about.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">À propos</a>
+        <a href="index.html#contact" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Contact</a>
+      </div>
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+      </p>
     </div>
   </footer>
 
   <script src="assets/script.js"></script>
+  <script>
+    // Système de filtres
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card-visual');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
