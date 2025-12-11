@@ -134,7 +134,8 @@ html.dark {
 
 /* Nouvelles classes pour page projets avec thumbnails */
 .project-card-visual {
-  @apply rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/10 hover:-translate-y-1 hover:border-sky-500/50;
+  @apply relative rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-sky-500/50;
+  box-shadow: 0 8px 22px rgba(2,6,23,0.04);
 }
 
 .tech-icon-badge {
@@ -142,7 +143,58 @@ html.dark {
 }
 
 .btn-card-primary {
-  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-sky-500/30;
+  @apply inline-flex items-center justify-center gap-3 px-5 py-2 rounded-full bg-gradient-to-r from-sky-500 to-purple-600 text-white text-sm font-semibold transition-transform duration-220;
+  border: 1px solid rgba(255,255,255,0.06);
+  will-change: transform;
+}
+
+/* Hover / focus */
+.btn-card-primary:hover, .btn-card-primary:focus-visible {
+  transform: translateY(-6px);
+}
+
+/* Ensure CTA is above the full-card overlay */
+.project-card-visual .btn-card-primary {
+  @apply relative z-20;
+}
+
+/* Subtle highlight overlay on hover for the whole card */
+.project-card-visual::after {
+  content: "";
+  @apply absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-300 opacity-0;
+  background: linear-gradient(180deg, rgba(var(--color-primary), 0.06), rgba(255,255,255,0));
+}
+.project-card-visual:hover::after {
+  opacity: 1;
+}
+
+/* Stronger card shadow on hover (visual emphasis on card, not button) */
+.project-card-visual:hover {
+  box-shadow: 0 28px 70px rgba(14,165,233,0.10);
+}
+
+/* Make the CTA stand out when hovering the card */
+.project-card-visual:hover .btn-card-primary {
+  transform: translateY(-6px);
+}
+
+/* Animated arrow inside CTA */
+.btn-card-primary .btn-arrow {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  transform: translateX(0);
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), opacity 180ms;
+}
+.project-card-visual:hover .btn-card-primary .btn-arrow {
+  transform: translateX(8px);
+  opacity: 0.98;
+}
+
+/* Focus styles for keyboard users */
+.btn-card-primary:focus-visible {
+  outline: 3px solid rgba(var(--color-primary), 0.18);
+  outline-offset: 3px;
 }
 
 .btn-card-secondary {
