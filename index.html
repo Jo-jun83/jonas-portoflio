@@ -68,28 +68,42 @@
         </p>
 
         <div class="flex flex-wrap gap-4 mb-8">
-          <a href="#contact" class="btn-primary">
-            <span>✉</span>
-            Me contacter
+          <a href="#contact" class="btn-primary group">
+            <span class="icon-wrapper">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Me contacter</span>
           </a>
-          <a href="projects.html" class="btn-secondary">
-            Voir mes projets
-            <span>→</span>
+          <a href="projects.html" class="btn-secondary group">
+            <span class="icon-arrow-wrapper">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Voir mes projets</span>
           </a>
-          <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-ghost" download>
-            <span>📄</span>
-            Télécharger mon CV
+          <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-ghost group" download>
+            <span class="icon-wrapper">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Télécharger mon CV</span>
           </a>
         </div>
 
         <div class="flex flex-wrap gap-2 text-xs">
-          <span class="badge-tech">C</span>
-          <span class="badge-tech">JavaScript</span>
-          <span class="badge-tech">PHP</span>
-          <span class="badge-tech">SQL / MySQL</span>
-          <span class="badge-tech">Flask</span>
-          <span class="badge-tech">React / Next.js</span>
-          <span class="badge-tech">Docker</span>
+          <span class="badge-tech"></span>
+          <span class="badge-tech"></span>
+          <span class="badge-tech"></span>
+          <span class="badge-tech"></span>
+          <span class="badge-tech"></span>
+          <span class="badge-tech"></span>
+          <span class="badge-tech"></span>
         </div>
       </div>
 
@@ -162,46 +176,51 @@
     <section class="mt-14">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-xl font-semibold">Projets récents</h2>
-        <a href="projects.html" class="text-sm text-sky-600 dark:text-sky-400 hover:underline">
-          Voir tous les projets →
+        <a href="projects.html" class="link-inline group text-sm">
+          <span>Voir tous les projets</span>     
         </a>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <!-- Exemple MoveByChloé -->
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-lg mb-1">MoveByChloé</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">2024 – 2025 · Projet portfolio Holberton</p>
-            <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">
-              Plateforme de réservation de cours de sport avec back-office pour gérer les cours, les utilisateurs et les réservations.
-              API REST en Flask, base de données MySQL et front moderne avec Next.js.
-            </p>
-          </div>
-          <div class="flex flex-wrap gap-2 mt-3 text-xs">
-            <span class="badge-tech">Flask</span>
-            <span class="badge-tech">MySQL</span>
-            <span class="badge-tech">React / Next.js</span>
-            <span class="badge-tech">JWT</span>
-          </div>
-        </article>
+        <!-- MoveByChloé (carte cliquable) -->
+        <a href="projects/movebychloe.html" class="block no-underline">
+          <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 flex flex-col justify-between hover:shadow-lg transition-shadow duration-200">
+            <div>
+              <h3 class="font-semibold text-lg mb-1">MoveByChloé</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">2024 – 2025 · Projet portfolio Holberton</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">
+                Plateforme de réservation de cours de sport avec back-office pour gérer les cours, les utilisateurs et les réservations.
+                API REST en Flask, base de données MySQL et front moderne avec Next.js.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-3 text-xs">
+              <span class="badge-tech">Flask</span>
+              <span class="badge-tech">MySQL</span>
+              <span class="badge-tech">React / Next.js</span>
+              <span class="badge-tech">JWT</span>
+            </div>
+          </article>
+        </a>
 
-        <!-- HBnB -->
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-lg mb-1">HBnB</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">2025 · Holberton School</p>
-            <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">
-              Application inspirée d’Airbnb : gestion des utilisateurs, des annonces, des équipements et des avis 
-              via une API REST en Flask et SQLAlchemy.
-            </p>
-          </div>
-          <div class="flex flex-wrap gap-2 mt-3 text-xs">
-            <span class="badge-tech">Flask</span>
-            <span class="badge-tech">SQLAlchemy</span>
-            <span class="badge-tech">API REST</span>
-          </div>
-        </article>
+        <!-- Féminapédia (carte cliquable) -->
+        <a href="projects/feminapedia.html" class="block no-underline">
+          <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 flex flex-col justify-between hover:shadow-lg transition-shadow duration-200">
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Feminapedia</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Décembre 2025 · Site vitrine</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">
+                Site vitrine réalisé pour deux kinésithérapeutes : pages de présentation, services, prise de contact via formulaire,
+                et optimisation responsive. Focus sur lisibilité, accessibilité et conversion.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-3 text-xs">
+              <span class="badge-tech">HTML5</span>
+              <span class="badge-tech">CSS3</span>
+              <span class="badge-tech">JavaScript</span>
+              <span class="badge-tech">Accessibilité</span>
+            </div>
+          </article>
+        </a>
       </div>
     </section>
 
@@ -215,22 +234,40 @@
         </p>
         <div class="space-y-4 text-sm text-slate-700 dark:text-slate-200">
           <p class="flex items-center gap-3">
-            <span class="text-xl">📧</span>
-            <a href="mailto:jonas.jungling@holbertonstudents.com" class="text-sky-600 dark:text-sky-400 hover:underline font-medium">jonas.jungling@holbertonstudents.com</a>
+            <span class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <a href="mailto:jonas.jungling@holbertonstudents.com" class="link-contact">jonas.jungling@holbertonstudents.com</a>
           </p>
           <p class="flex items-center gap-3">
-            <span class="text-xl">🔗</span>
-            <a href="https://www.linkedin.com/in/jonas-jungling" target="_blank" class="text-sky-600 dark:text-sky-400 hover:underline font-medium">Profil LinkedIn</a>
+            <span class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <a href="https://www.linkedin.com/in/jonas-jungling" target="_blank" class="link-contact">Profil LinkedIn</a>
           </p>
           <p class="flex items-center gap-3">
-            <span class="text-xl">🐙</span>
-            <a href="https://github.com/Jo-jun83" target="_blank" class="text-sky-600 dark:text-sky-400 hover:underline font-medium">GitHub</a>
+            <span class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <a href="https://github.com/Jo-jun83" target="_blank" class="link-contact">GitHub</a>
           </p>
         </div>
         <div class="mt-8 pt-6 border-t border-sky-200 dark:border-sky-900">
-          <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-primary" download>
-            <span>📄</span>
-            Télécharger mon CV
+          <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-primary group" download>
+            <span class="icon-wrapper">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Télécharger mon CV</span>
           </a>
         </div>
       </div>

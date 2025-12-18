@@ -202,7 +202,15 @@ html.dark {
 }
 
 .filter-btn {
-  @apply px-4 py-2 rounded-full text-sm font-medium border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-sky-500 hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-200;
+  @apply px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-200;
+  border: 2px solid rgb(var(--color-border));
+  color: rgb(var(--color-text-muted));
+  background: transparent;
+  padding-left: 1.5rem; /* ensure roomy left/right */
+  padding-right: 1.5rem;
+  border-radius: 9999px; /* pill */
+  min-width: 140px;
+  text-align: center;
 }
 
 .filter-btn.active {
@@ -216,3 +224,195 @@ html.dark {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* === Nouveaux styles UI/UX pour liens === */
+
+/* Icon wrapper pour les boutons */
+.icon-wrapper {
+  @apply inline-flex items-center justify-center w-7 h-7 rounded-full flex-shrink-0;
+  background: rgba(255, 255, 255, 0.15);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.btn-primary .icon-wrapper {
+  background: rgba(255, 255, 255, 0.2);
+}
+.btn-ghost .icon-wrapper {
+  background: rgba(14, 165, 233, 0.08);
+  color: rgb(var(--color-primary-dark));
+}
+.btn-primary:hover .icon-wrapper,
+.btn-ghost:hover .icon-wrapper {
+  transform: scale(1.1);
+}
+.btn-primary .icon-wrapper svg,
+.btn-ghost .icon-wrapper svg {
+  display: block;
+}
+
+/* Icon arrow wrapper pour btn-secondary */
+.icon-arrow-wrapper {
+  @apply inline-flex items-center justify-center w-6 h-6 rounded-full flex-shrink-0;
+  background: rgba(var(--color-primary), 0.1);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.btn-secondary:hover .icon-arrow-wrapper {
+  transform: translateX(4px);
+  background: rgba(var(--color-primary), 0.15);
+}
+.icon-arrow-wrapper svg {
+  display: block;
+}
+
+/* Links inline (Voir tous les projets, etc.) */
+.link-inline {
+  @apply inline-flex items-center gap-2 text-sky-600 dark:text-sky-400 font-medium transition-all duration-200;
+  position: relative;
+}
+.link-inline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, rgb(var(--color-primary)), rgb(var(--color-accent)));
+  transition: width 0.25s ease;
+  border-radius: 2px;
+}
+.link-inline:hover::after {
+  width: 100%;
+}
+.icon-arrow-inline {
+  @apply inline-flex items-center justify-center;
+  transition: transform 0.2s ease;
+}
+.link-inline:hover .icon-arrow-inline {
+  transform: translateX(3px);
+}
+.icon-arrow-inline svg {
+  display: block;
+}
+
+/* Contact icons */
+.contact-icon {
+  @apply inline-flex items-center justify-center w-9 h-9 rounded-lg flex-shrink-0;
+  background: rgba(var(--color-primary), 0.08);
+  color: rgb(var(--color-primary-dark));
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.contact-icon:hover {
+  background: rgba(var(--color-primary), 0.12);
+  transform: scale(1.05);
+}
+.contact-icon svg {
+  display: block;
+}
+
+/* Contact links */
+.link-contact {
+  @apply text-sky-600 dark:text-sky-400 font-medium transition-all duration-200;
+  position: relative;
+}
+.link-contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, rgb(var(--color-primary)), rgb(var(--color-accent)));
+  transition: width 0.25s ease;
+  border-radius: 2px;
+}
+.link-contact:hover::after {
+  width: 100%;
+}
+
+/* Filter buttons improvements */
+.filter-btn {
+  @apply px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-200;
+  border: 2px solid rgb(var(--color-border));
+  color: rgb(var(--color-text-muted));
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 9999px;
+  min-width: 140px;
+  text-align: center;
+}
+.filter-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(var(--color-primary), 0.05), rgba(var(--color-accent), 0.03));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.filter-btn:hover::before {
+  opacity: 1;
+}
+.filter-btn:hover {
+  border-color: rgb(var(--color-primary));
+  color: rgb(var(--color-primary-dark));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(14,165,233,0.06);
+}
+.filter-btn.active {
+  background: linear-gradient(135deg, rgb(14 165 233), rgb(168 85 247));
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3);
+  font-weight: 600;
+}
+.filter-btn.active::before {
+  opacity: 0;
+}
+
+/* Improved card button arrow */
+.btn-card-primary {
+  @apply inline-flex items-center justify-center gap-3 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200;
+  background: linear-gradient(135deg, rgb(14 165 233), rgb(168 85 247));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.18);
+}
+.btn-card-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(14, 165, 233, 0.28);
+}
+.btn-card-primary .btn-label { padding-right: 0.5rem; }
+.btn-card-primary .btn-arrow {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+.btn-card-primary:hover .btn-arrow {
+  transform: translateX(6px);
+}
+.project-card-visual:hover .btn-card-primary {
+  transform: translateY(-3px);
+}
+
+/* Focus states for accessibility */
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-ghost:focus-visible,
+.link-inline:focus-visible,
+.link-contact:focus-visible {
+  outline: 3px solid rgba(var(--color-primary), 0.3);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Strong override to ensure visible padding & radius for project CTAs */
+.btn-card-primary {
+  padding: 0.5rem 0.5rem; /* vertical | horizontal */
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.btn-card-primary .btn-label { display: inline-block; }
