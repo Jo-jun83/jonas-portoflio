@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <title>MyCoach - Jonas Jungling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['system-ui', 'Segoe UI', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+    <!-- Navbar -->
+    <header class="border-b border-slate-200/70 dark:border-slate-800/80 bg-white/80 dark:bg-slate-950/80 backdrop-blur sticky top-0 z-30">
+        <nav class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-sky-500 to-purple-500 flex items-center justify-center text-white font-semibold">
+                    J
+                </div>
+                <div class="leading-tight">
+                    <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-4">
+                <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
+                <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
+
+                <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
+                    <span id="theme-toggle-light" class="hidden">🌞</span>
+                    <span id="theme-toggle-dark" class="hidden">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 pt-6 pb-16">
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
+            <a href="../index.html" class="hover:text-sky-500">Accueil</a>
+            <span>→</span>
+            <a href="../projects.html" class="hover:text-sky-500">Projets</a>
+            <span>→</span>
+            <span class="text-slate-900 dark:text-slate-100 font-medium">MyCoach</span>
+        </div>
+
+        <!-- Hero Banner -->
+        <div class="project-hero flex items-center justify-center mb-8">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3">MyCoach</h1>
+                <p class="text-lg text-slate-700 dark:text-slate-300">Plateforme SaaS multi-coachs pour la gestion, la réservation et le paiement de cours sportifs</p>
+            </div>
+        </div>
+
+        <!-- Image projet -->
+        <section class="mb-12">
+            <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
+                <img src="../assets/img/mycoach.png" alt="MyCoach screenshot" class="w-full h-auto" />
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="mb-12">
+            <div class="grid md:grid-cols-3 gap-4 mb-8">
+                <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
+                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Période</p>
+                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Depuis décembre 2025</p>
+                </div>
+                <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
+                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Type</p>
+                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50">SaaS</p>
+                </div>
+                <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
+                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Contexte</p>
+                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Projet personnel (évolution MoveByChloé)</p>
+                </div>
+            </div>
+
+            <div class="prose prose-slate dark:prose-invert max-w-none">
+                <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+                    MyCoach est une plateforme SaaS destinée aux coachs sportifs (fitness, yoga, pilates, etc.) et à leurs clients. Elle permet aux coachs de centraliser leur activité, de gérer leur planning, et aux utilisateurs de découvrir, réserver et payer des cours en ligne. L’architecture multi-coachs et multi-comptes permet à chaque coach de disposer de son propre espace, tandis qu’un back-office admin centralise la gestion globale.
+                </p>
+                <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed">
+                    La plateforme intègre une gestion avancée des rôles (admin, coach, utilisateur), une API REST sécurisée, et une interface moderne et responsive basée sur React, Next.js et TailwindCSS.
+                </p>
+            </div>
+        </section>
+
+        <!-- Stack technique -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Stack technique</h2>
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
+                    <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Backend</h3>
+                    <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
+                        <div class="flex items-center gap-3">
+                            <span class="badge-backend">Flask</span>
+                            <span class="text-xs">Framework Python</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="badge-database">MySQL</span>
+                            <span class="text-xs">Base de données</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="badge-tool">JWT</span>
+                            <span class="text-xs">Authentification & rôles</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="badge-tool">Stripe</span>
+                            <span class="text-xs">Gestion et intégration des paiements en ligne</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
+                    <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Frontend</h3>
+                    <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
+                        <div class="flex items-center gap-3">
+                            <span class="badge-frontend">React</span>
+                            <span class="text-xs">Framework UI</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="badge-frontend">Next.js</span>
+                            <span class="text-xs">Framework React</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="badge-frontend">TailwindCSS</span>
+                            <span class="text-xs">Styles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fonctionnalités principales -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Fonctionnalités principales</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
+                    <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
+                        <span class="text-xl">🧑‍💼</span> Côté client
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
+                        <li>• Découverte des coachs et de leurs offres</li>
+                        <li>• Consultation du planning hebdomadaire</li>
+                        <li>• Réservation de cours en ligne</li>
+                        <li>• Paiement sécurisé</li>
+                        <li>• Espace utilisateur avec historique</li>
+                        <li>• Notifications et emails de confirmation</li>
+                    </ul>
+                </div>
+                <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
+                    <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
+                        <span class="text-xl">🗂️</span> Back-office coach
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
+                        <li>• Gestion des cours (CRUD)</li>
+                        <li>• Gestion des plannings et disponibilités</li>
+                        <li>• Gestion des réservations et des utilisateurs</li>
+                        <li>• Gestion du profil public (contenu, images)</li>
+                        <li>• Accès aux statistiques et à l’activité</li>
+                        <li>• Accès basé sur les rôles</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-1 gap-6 mt-6">
+                <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
+                    <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
+                        <span class="text-xl">🔑</span> Administration
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
+                        <li>• Gestion globale des coachs</li>
+                        <li>• Gestion des utilisateurs</li>
+                        <li>• Configuration de la plateforme</li>
+                        <li>• Sécurité et cohérence des données</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apprentissages -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Ce que j'ai appris</h2>
+            <div class="space-y-4">
+                <div class="rounded-xl border-l-4 border-blue-500 bg-white/70 dark:bg-slate-900/60 p-6">
+                    <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Architecture SaaS scalable</h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                        Conception d’une architecture multi-comptes et multi-rôles, gestion de la scalabilité, et sécurisation des accès via JWT et RBAC. Structuration d’une API REST évolutive et maintenable.
+                    </p>
+                </div>
+                <div class="rounded-xl border-l-4 border-green-500 bg-white/70 dark:bg-slate-900/60 p-6">
+                    <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Expérience produit SaaS</h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                        Développement d’une plateforme orientée produit, avec gestion des rôles, back-offices dédiés, intégration et configuration complète de Stripe pour les paiements en ligne, et expérience utilisateur adaptée à chaque profil (admin, coach, client).
+                    </p>
+                </div>
+                <div class="rounded-xl border-l-4 border-purple-500 bg-white/70 dark:bg-slate-900/60 p-6">
+                    <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Évolution MVP → SaaS</h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                        Passage d’un MVP mono-coach à une plateforme SaaS complète, avec gestion centralisée, sécurité, et modularité pour l’ajout de nouvelles fonctionnalités.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex items-center justify-between pt-8 border-t border-slate-200 dark:border-slate-800">
+            <a href="../projects.html" class="btn-ghost">
+                ← Retour aux projets
+            </a>
+            <a href="../index.html#contact" class="btn-secondary">
+                Me contacter
+            </a>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
+        <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+            © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+        </p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+</body>
+</html>
