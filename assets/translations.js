@@ -106,7 +106,7 @@ window.translations = {
         title: "Contact",
         availability: {
           highlight: "Disponible immédiatement",
-          suffix: " pour un CDI en développement fullstack. Basé en France, ouvert au télétravail et aux opportunités hybrides.",
+          suffix: " pour un CDI en développement fullstack. Basé à Saint-Raphaël, dans le Var, je recherche prioritairement des opportunités en présentiel ou hybrides entre Toulon et Nice, et reste ouvert aux postes en télétravail partout en France.",
         },
         linkedin: "Profil LinkedIn",
       },
@@ -148,10 +148,10 @@ window.translations = {
         goals: {
           title: "Ce que je recherche",
           p1: "Je recherche un CDI en développement web / full-stack, au sein d’une équipe où je pourrai contribuer à des projets concrets et continuer à progresser techniquement.",
-          p2: "J’apprécie particulièrement :",
-          item1: "concevoir des API et des back-ends robustes ;",
-          item2: "comprendre les besoins métier pour construire des solutions adaptées ;",
-          item3: "faire évoluer la qualité du code à travers les tests, le refactoring et la sécurité.",
+          p2: "À travers le développement de MoveBy, mon SaaS destiné aux coachs indépendants, j’ai particulièrement apprécié :",
+          item1: "concevoir une architecture full stack cohérente, du front-end jusqu’au back-end et à la base de données ;",
+          item2: "traduire des besoins métier réels en fonctionnalités concrètes, utiles et compréhensibles pour les utilisateurs ;",
+          item3: "faire évoluer un produit en portant attention à la qualité du code, à la sécurité, aux tests et à la fiabilité globale.",
         },
         contact: {
           title: "Me contacter",
@@ -791,7 +791,7 @@ window.translations = {
         title: "Contacto",
         availability: {
           highlight: "Disponible de inmediato",
-          suffix: " para un contrato indefinido en desarrollo fullstack. Basado en Francia, abierto al teletrabajo y a oportunidades híbridas.",
+          suffix: " para un contrato indefinido en desarrollo fullstack. Actualmente estoy abierto de inmediato a oportunidades en remoto completo. A partir de 2027, tengo previsto instalarme en Valladolid, España, por lo que también estaré abierto a oportunidades presenciales o híbridas en esa zona.",
         },
         linkedin: "Perfil de LinkedIn",
       },
@@ -833,10 +833,10 @@ window.translations = {
         goals: {
           title: "Lo que busco",
           p1: "Busco un contrato indefinido en desarrollo web / full-stack, en un equipo donde pueda contribuir a proyectos concretos y seguir progresando técnicamente.",
-          p2: "Valoro especialmente:",
-          item1: "diseñar API y back-ends robustos;",
-          item2: "comprender las necesidades de negocio para construir soluciones adaptadas;",
-          item3: "hacer evolucionar la calidad del código mediante pruebas, refactorización y seguridad.",
+          p2: "A través del desarrollo deMoveBy, mi SaaS dirigido a entrenadores independientes, he disfrutado especialmente de:",
+          item1: "diseñar una arquitectura full stack coherente, desde el front-end hasta el back-end y la base de datos;",
+          item2: "traducir necesidades de negocio reales en funcionalidades concretas, útiles y comprensibles para los usuarios;",
+          item3: "hacer evolucionar un producto prestando atención a la calidad del código, la seguridad, las pruebas y la fiabilidad global.",
         },
         contact: {
           title: "Contactarme",
