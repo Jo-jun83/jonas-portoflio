@@ -73,33 +73,41 @@
         </p>
 
         <div class="flex flex-wrap gap-4 mb-8">
-          <a href="#contact" class="btn-primary group">
-            <span class="icon-wrapper">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <span data-i18n="common.contact">Me contacter</span>
-          </a>
-          <a href="projects.html" class="btn-secondary group">
-            <span class="icon-arrow-wrapper">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <span data-i18n="home.hero.cta.projects">Voir mes projets</span>
-          </a>
-          <a href="assets/cv/jonas-jungling-cv-FR.pdf" class="btn-ghost group" download="CV-Jonas-Jungling-FR.pdf" data-i18n-attr="href:common.cv.file;download:common.cv.filename">
-            <span class="icon-wrapper">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <span data-i18n="common.cv.download">Télécharger mon CV</span>
-          </a>
-        </div>
+  <a href="#contact" class="btn-primary group">
+    <span class="flex flex-col items-center justify-center text-center gap-2">
+      <span class="icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span data-i18n="common.contact">Me contacter</span>
+    </span>
+  </a>
+
+  <a href="projects.html" class="btn-secondary group">
+    <span class="flex flex-col items-center justify-center text-center gap-2">
+      <span class="icon-arrow-wrapper">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span data-i18n="home.hero.cta.projects">Voir mes projets</span>
+    </span>
+  </a>
+
+  <a href="assets/cv/jonas-jungling-cv-FR.pdf" class="btn-ghost group" download="CV-Jonas-Jungling-FR.pdf" data-i18n-attr="href:common.cv.file;download:common.cv.filename">
+    <span class="flex flex-col items-center justify-center text-center gap-2">
+      <span class="icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span data-i18n="common.cv.download">Télécharger mon CV</span>
+    </span>
+  </a>
+</div>
 
         <div class="flex flex-wrap gap-2 text-xs">
           <span class="badge-tech"></span>
@@ -119,7 +127,7 @@
           </p>
           <ul class="space-y-4 text-sm">
             <li class="flex items-start gap-3">
-              <span class="text-xl mt-0.5">💼</span>
+              <span class="text-xl mt-0.5">🔎</span>
               <span class="text-slate-700 dark:text-slate-200"><span data-i18n="home.summary.item1.prefix">Recherche </span><strong class="text-sky-600 dark:text-sky-400" data-i18n="home.summary.item1.highlight">CDI</strong><span data-i18n="home.summary.item1.suffix"> en développement web / fullstack.</span></span>
             </li>
             <li class="flex items-start gap-3">
@@ -127,7 +135,7 @@
               <span class="text-slate-700 dark:text-slate-200"><span data-i18n="home.summary.item2.prefix">Formé à </span><strong data-i18n="home.summary.item2.highlight">Holberton School</strong><span data-i18n="home.summary.item2.suffix"> (C, algorithmie, systèmes, web, réseau).</span></span>
             </li>
             <li class="flex items-start gap-3">
-              <span class="text-xl mt-0.5">🚀</span>
+              <span class="text-xl mt-0.5">💼</span>
               <span class="text-slate-700 dark:text-slate-200"><span data-i18n="home.summary.item3.prefix">Expérience sur des projets concrets : </span><strong data-i18n="home.summary.item3.highlight">MoveBy, Feminapedia, HBnB, simple_shell, printf</strong><span data-i18n="home.summary.item3.suffix">, etc.</span></span>
             </li>
           </ul>
