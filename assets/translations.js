@@ -64,16 +64,16 @@ window.translations = {
         title: "Compétences",
         languages: {
           title: "Langages & Web",
-          item1: "• C, JavaScript, PHP, SQL, Bash",
+          item1: "• C, JavaScript, Python, PHP, SQL, Bash",
           item2: "• HTML5, CSS3, Tailwind CSS",
-          item3: "• Notions : TypeScript (selon projets), Python",
+          item3: "• Notions : TypeScript",
         },
         tools: {
           title: "Frameworks & Outils",
           item1: "• Flask, React / Next.js",
           item2: "• MySQL",
           item3: "• Git, GitHub, Docker, Linux",
-          item4: "• Netlify (hébergement statique)",
+          item4: "• Netlify, Railway, Render",
         },
         backend: {
           title: "Backend & API",
@@ -749,16 +749,16 @@ window.translations = {
         title: "Competencias",
         languages: {
           title: "Lenguajes y Web",
-          item1: "• C, JavaScript, PHP, SQL, Bash",
+          item1: "• C, JavaScript, Python,PHP, SQL, Bash",
           item2: "• HTML5, CSS3, Tailwind CSS",
-          item3: "• Nociones: TypeScript (según proyectos), Python",
+          item3: "• Nociones: TypeScript",
         },
         tools: {
           title: "Frameworks y Herramientas",
           item1: "• Flask, React / Next.js",
           item2: "• MySQL",
           item3: "• Git, GitHub, Docker, Linux",
-          item4: "• Netlify (alojamiento estático)",
+          item4: "• Netlify, Railway, Render",
         },
         backend: {
           title: "Backend y API",
