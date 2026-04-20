@@ -2,7 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>MoveByChloé - Jonas Jungling</title>
+  <title id="page-title" data-i18n="projects.movebychloe.meta.title">MoveByChloé - Jonas Jungling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,13 +31,18 @@
         </div>
         <div class="leading-tight">
           <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="common.role">Développeur Fullstack</p>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
-        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
+        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+
+        <div class="lang-toggle" role="group" aria-label="Sélecteur de langue" data-i18n-attr="aria-label:common.languageSwitcher">
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
 
         <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
           <span id="theme-toggle-light" class="hidden">🌞</span>
@@ -50,25 +55,25 @@
   <main class="max-w-5xl mx-auto px-4 pt-6 pb-16">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
-      <a href="../index.html" class="hover:text-sky-500">Accueil</a>
+      <a href="../index.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.home">Accueil</a>
       <span>→</span>
-      <a href="../projects.html" class="hover:text-sky-500">Projets</a>
+      <a href="../projects.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.projects">Projets</a>
       <span>→</span>
-      <span class="text-slate-900 dark:text-slate-100 font-medium">MoveByChloé</span>
+      <span class="text-slate-900 dark:text-slate-100 font-medium" data-i18n="projects.movebychloe.breadcrumb.current">MoveByChloé</span>
     </div>
 
     <!-- Hero Banner -->
     <div class="project-hero flex items-center justify-center mb-8">
       <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3">MoveByChloé</h1>
-        <p class="text-lg text-slate-700 dark:text-slate-300">Plateforme de réservation de cours sportifs</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="projects.movebychloe.hero.title">MoveByChloé</h1>
+        <p class="text-lg text-slate-700 dark:text-slate-300" data-i18n="projects.movebychloe.hero.subtitle">Plateforme de réservation de cours sportifs</p>
       </div>
     </div>
 
     <!-- Image projet -->
     <section class="mb-12">
       <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
-        <img src="../assets/img/movebychloe.png" alt="MoveByChloé screenshot" class="w-full h-auto" />
+        <img src="../assets/img/movebychloe.png" alt="Capture d'écran MoveByChloé" data-i18n-attr="alt:projects.movebychloe.image.alt" class="w-full h-auto" />
       </div>
     </section>
 
@@ -76,25 +81,25 @@
     <section class="mb-12">
       <div class="grid md:grid-cols-3 gap-4 mb-8">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Période</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Juillet - Novembre 2025</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.movebychloe.overview.period.label">Période</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.movebychloe.overview.period.value">Juillet - Novembre 2025</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Type</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Application web</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.movebychloe.overview.type.label">Type</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.movebychloe.overview.type.value">Application web</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Contexte</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Holberton School</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.movebychloe.overview.context.label">Contexte</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.movebychloe.overview.context.value">Holberton School</p>
         </div>
       </div>
 
       <div class="prose prose-slate dark:prose-invert max-w-none">
-        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4" data-i18n="projects.movebychloe.overview.description.p1">
           MoveByChloé est une plateforme de réservation de cours sportifs développée pour une coach professionnelle. 
           Le site permet aux utilisateurs de consulter les cours disponibles, de réserver des sessions, et de gérer leurs paiements en ligne.
         </p>
-        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed">
+        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.movebychloe.overview.description.p2">
           Un back-office complet permet à l'administrateur de gérer l'ensemble des cours, les plannings, les tarifs et les utilisateurs. 
           L'authentification sécurisée via JWT garantit la protection des données personnelles et des transactions.
         </p>
@@ -103,39 +108,39 @@
 
     <!-- Stack technique -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Stack technique</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.movebychloe.stack.title">Stack technique</h2>
       <div class="grid sm:grid-cols-2 gap-6">
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Backend</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.movebychloe.stack.backend.title">Backend</h3>
           <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
             <div class="flex items-center gap-3">
               <span class="badge-backend">Flask</span>
-              <span class="text-xs">Framework Python</span>
+              <span class="text-xs" data-i18n="projects.movebychloe.stack.backend.flask.desc">Framework Python</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-database">MySQL</span>
-              <span class="text-xs">Base de données</span>
+              <span class="text-xs" data-i18n="projects.movebychloe.stack.backend.mysql.desc">Base de données</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-tool">JWT</span>
-              <span class="text-xs">Authentification</span>
+              <span class="text-xs" data-i18n="projects.movebychloe.stack.backend.jwt.desc">Authentification</span>
             </div>
           </div>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Frontend</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.movebychloe.stack.frontend.title">Frontend</h3>
           <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
             <div class="flex items-center gap-3">
               <span class="badge-frontend">React</span>
-              <span class="text-xs">Framework UI</span>
+              <span class="text-xs" data-i18n="projects.movebychloe.stack.frontend.react.desc">Framework UI</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-frontend">Next.js</span>
-              <span class="text-xs">Framework React</span>
+              <span class="text-xs" data-i18n="projects.movebychloe.stack.frontend.next.desc">Framework React</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-frontend">TailwindCSS</span>
-              <span class="text-xs">Styles</span>
+              <span class="text-xs" data-i18n="projects.movebychloe.stack.frontend.tailwind.desc">Styles</span>
             </div>
           </div>
         </div>
@@ -144,30 +149,30 @@
 
     <!-- Features principales -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Fonctionnalités principales</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.movebychloe.features.title">Fonctionnalités principales</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
           <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-            <span class="text-xl">🏃‍♀️</span> Espace utilisateur
+            <span class="text-xl">🏃‍♀️</span> <span data-i18n="projects.movebychloe.features.user.title">Espace utilisateur</span>
           </h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• Consultation du catalogue de cours</li>
-            <li>• Réservation en ligne simple et rapide</li>
-            <li>• Paiement sécurisé intégré</li>
-            <li>• Gestion du profil et historique</li>
-            <li>• Notifications de confirmation</li>
+            <li data-i18n="projects.movebychloe.features.user.item1">• Consultation du catalogue de cours</li>
+            <li data-i18n="projects.movebychloe.features.user.item2">• Réservation en ligne simple et rapide</li>
+            <li data-i18n="projects.movebychloe.features.user.item3">• Paiement sécurisé intégré</li>
+            <li data-i18n="projects.movebychloe.features.user.item4">• Gestion du profil et historique</li>
+            <li data-i18n="projects.movebychloe.features.user.item5">• Notifications de confirmation</li>
           </ul>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
           <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-            <span class="text-xl">⚙️</span> Back-office
+            <span class="text-xl">⚙️</span> <span data-i18n="projects.movebychloe.features.admin.title">Back-office</span>
           </h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• Gestion complète des cours (CRUD)</li>
-            <li>• Configuration des plannings</li>
-            <li>• Gestion des tarifs et promotions</li>
-            <li>• Administration des utilisateurs</li>
-            <li>• Statistiques et reporting</li>
+            <li data-i18n="projects.movebychloe.features.admin.item1">• Gestion complète des cours (CRUD)</li>
+            <li data-i18n="projects.movebychloe.features.admin.item2">• Configuration des plannings</li>
+            <li data-i18n="projects.movebychloe.features.admin.item3">• Gestion des tarifs et promotions</li>
+            <li data-i18n="projects.movebychloe.features.admin.item4">• Administration des utilisateurs</li>
+            <li data-i18n="projects.movebychloe.features.admin.item5">• Statistiques et reporting</li>
           </ul>
         </div>
       </div>
@@ -175,13 +180,14 @@
 
     <!-- Vidéo démonstration -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Démonstration</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.movebychloe.demo.title">Démonstration</h2>
       <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg">
         <div class="relative" style="padding-bottom: 56.25%; height: 0;">
           <iframe 
             class="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/0WCLshtnnZY" 
-            title="Démonstration MoveByChloé" 
+            title="Démonstration MoveByChloé"
+            data-i18n-attr="title:projects.movebychloe.demo.iframeTitle" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen>
@@ -192,25 +198,25 @@
 
     <!-- Apprentissages -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Ce que j'ai appris</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.movebychloe.learnings.title">Ce que j'ai appris</h2>
       <div class="space-y-4">
         <div class="rounded-xl border-l-4 border-blue-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Architecture fullstack moderne</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.movebychloe.learnings.architecture.title">Architecture fullstack moderne</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.movebychloe.learnings.architecture.body">
             Mise en place d'une architecture complète avec séparation frontend/backend, API REST, et gestion d'état avec React. 
             Intégration de Next.js pour le SSR et l'optimisation des performances.
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-green-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Sécurité et authentification</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.movebychloe.learnings.security.title">Sécurité et authentification</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.movebychloe.learnings.security.body">
             Implémentation d'un système d'authentification robuste avec JWT, gestion des rôles utilisateur/admin, 
             et protection des routes sensibles. Validation des données côté client et serveur.
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-purple-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Gestion de projet complexe</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.movebychloe.learnings.project.title">Gestion de projet complexe</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.movebychloe.learnings.project.body">
             Développement d'une application complète avec gestion de planning, système de réservation, paiements en ligne, 
             et back-office d'administration. Coordination entre les différentes fonctionnalités et gestion de la base de données relationnelle.
           </p>
@@ -220,10 +226,10 @@
 
     <!-- Navigation -->
     <div class="flex items-center justify-between pt-8 border-t border-slate-200 dark:border-slate-800">
-      <a href="../projects.html" class="btn-ghost">
+      <a href="../projects.html" class="btn-ghost" data-i18n="common.backToProjects">
         ← Retour aux projets
       </a>
-      <a href="../index.html#contact" class="btn-secondary">
+      <a href="../index.html#contact" class="btn-secondary" data-i18n="common.contact">
         Me contacter
       </a>
     </div>
@@ -231,10 +237,11 @@
 
   <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
     <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+      © <span id="year"></span> <span data-i18n="common.footer.copy">Jonas Jungling — Portfolio développeur fullstack</span>
     </p>
   </footer>
 
+  <script src="../assets/translations.js"></script>
   <script src="../assets/script.js"></script>
 </body>
 </html>

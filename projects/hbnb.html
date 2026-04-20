@@ -2,7 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>HBnB - Jonas Jungling</title>
+  <title id="page-title" data-i18n="projects.hbnb.meta.title">HBnB - Jonas Jungling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,13 +31,18 @@
         </div>
         <div class="leading-tight">
           <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="common.role">Développeur Fullstack</p>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
-        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
+        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+
+        <div class="lang-toggle" role="group" aria-label="Sélecteur de langue" data-i18n-attr="aria-label:common.languageSwitcher">
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
 
         <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
           <span id="theme-toggle-light" class="hidden">🌞</span>
@@ -50,25 +55,25 @@
   <main class="max-w-5xl mx-auto px-4 pt-6 pb-16">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
-      <a href="../index.html" class="hover:text-sky-500">Accueil</a>
+      <a href="../index.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.home">Accueil</a>
       <span>→</span>
-      <a href="../projects.html" class="hover:text-sky-500">Projets</a>
+      <a href="../projects.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.projects">Projets</a>
       <span>→</span>
-      <span class="text-slate-900 dark:text-slate-100 font-medium">HBnB</span>
+      <span class="text-slate-900 dark:text-slate-100 font-medium" data-i18n="projects.hbnb.breadcrumb.current">HBnB</span>
     </div>
 
     <!-- Hero Banner -->
     <div class="project-hero flex items-center justify-center mb-8">
       <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3">HBnB</h1>
-        <p class="text-lg text-slate-700 dark:text-slate-300">API Backend type Airbnb</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="projects.hbnb.hero.title">HBnB</h1>
+        <p class="text-lg text-slate-700 dark:text-slate-300" data-i18n="projects.hbnb.hero.subtitle">API Backend type Airbnb</p>
       </div>
     </div>
 
     <!-- Image projet -->
     <section class="mb-12">
       <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
-        <img src="../assets/img/hbnb.png" alt="HBnB screenshot" class="w-full h-auto" />
+        <img src="../assets/img/hbnb.png" alt="HBnB screenshot" data-i18n-attr="alt:projects.hbnb.image.alt" class="w-full h-auto" />
       </div>
     </section>
 
@@ -76,25 +81,25 @@
     <section class="mb-12">
       <div class="grid md:grid-cols-3 gap-4 mb-8">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Période</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Avril - Mai 2025</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.hbnb.overview.period.label">Période</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.hbnb.overview.period.value">Avril - Mai 2025</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Type</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">API REST</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.hbnb.overview.type.label">Type</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.hbnb.overview.type.value">API REST</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Contexte</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Holberton School</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.hbnb.overview.context.label">Contexte</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.hbnb.overview.context.value">Holberton School</p>
         </div>
       </div>
 
       <div class="prose prose-slate dark:prose-invert max-w-none">
-        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4" data-i18n="projects.hbnb.overview.description.p1">
           HBnB est un projet backend inspiré d'Airbnb permettant de gérer des annonces immobilières, 
           utilisateurs, équipements et avis à partir d'une API REST structurée avec Flask et SQLAlchemy.
         </p>
-        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed">
+        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.hbnb.overview.description.p2">
           Ce projet est orienté architecture backend et gestion relationnelle, avec un focus sur la qualité 
           du code, la sérialisation JSON propre, et les opérations CRUD complètes avec mise à jour en cascade.
         </p>
@@ -103,39 +108,39 @@
 
     <!-- Stack technique -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Stack technique</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.hbnb.stack.title">Stack technique</h2>
       <div class="grid sm:grid-cols-2 gap-6">
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Backend</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.hbnb.stack.backend.title">Backend</h3>
           <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
             <div class="flex items-center gap-3">
               <span class="badge-tool">Python</span>
-              <span class="text-xs">Langage principal</span>
+              <span class="text-xs" data-i18n="projects.hbnb.stack.backend.python">Langage principal</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-backend">Flask</span>
-              <span class="text-xs">Framework web</span>
+              <span class="text-xs" data-i18n="projects.hbnb.stack.backend.flask">Framework web</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-backend">SQLAlchemy</span>
-              <span class="text-xs">ORM</span>
+              <span class="text-xs" data-i18n="projects.hbnb.stack.backend.sqlalchemy">ORM</span>
             </div>
           </div>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Base de données</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.hbnb.stack.database.title">Base de données</h3>
           <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
             <div class="flex items-center gap-3">
               <span class="badge-database">MySQL</span>
-              <span class="text-xs">SGBD relationnel</span>
+              <span class="text-xs" data-i18n="projects.hbnb.stack.database.mysql">SGBD relationnel</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-tool">REST API</span>
-              <span class="text-xs">Architecture</span>
+              <span class="text-xs" data-i18n="projects.hbnb.stack.database.rest">Architecture</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-tool">JSON</span>
-              <span class="text-xs">Sérialisation</span>
+              <span class="text-xs" data-i18n="projects.hbnb.stack.database.json">Sérialisation</span>
             </div>
           </div>
         </div>
@@ -144,30 +149,30 @@
 
     <!-- Features principales -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Fonctionnalités principales</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.hbnb.features.title">Fonctionnalités principales</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
           <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-            <span class="text-xl">🏠</span> Gestion des données
+            <span class="text-xl">🏠</span> <span data-i18n="projects.hbnb.features.data.title">Gestion des données</span>
           </h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• CRUD complet utilisateurs</li>
-            <li>• CRUD complet annonces</li>
-            <li>• Gestion des équipements</li>
-            <li>• Système d'avis et reviews</li>
-            <li>• Relations many-to-many</li>
+            <li data-i18n="projects.hbnb.features.data.item1">• CRUD complet utilisateurs</li>
+            <li data-i18n="projects.hbnb.features.data.item2">• CRUD complet annonces</li>
+            <li data-i18n="projects.hbnb.features.data.item3">• Gestion des équipements</li>
+            <li data-i18n="projects.hbnb.features.data.item4">• Système d'avis et reviews</li>
+            <li data-i18n="projects.hbnb.features.data.item5">• Relations many-to-many</li>
           </ul>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
           <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-            <span class="text-xl">⚡</span> Architecture API
+            <span class="text-xl">⚡</span> <span data-i18n="projects.hbnb.features.api.title">Architecture API</span>
           </h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• API REST complète</li>
-            <li>• Endpoints documentés</li>
-            <li>• Sérialisation JSON propre</li>
-            <li>• Mise à jour en cascade</li>
-            <li>• Validation des données</li>
+            <li data-i18n="projects.hbnb.features.api.item1">• API REST complète</li>
+            <li data-i18n="projects.hbnb.features.api.item2">• Endpoints documentés</li>
+            <li data-i18n="projects.hbnb.features.api.item3">• Sérialisation JSON propre</li>
+            <li data-i18n="projects.hbnb.features.api.item4">• Mise à jour en cascade</li>
+            <li data-i18n="projects.hbnb.features.api.item5">• Validation des données</li>
           </ul>
         </div>
       </div>
@@ -175,25 +180,25 @@
 
     <!-- Apprentissages -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Ce que j'ai appris</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.hbnb.learnings.title">Ce que j'ai appris</h2>
       <div class="space-y-4">
         <div class="rounded-xl border-l-4 border-blue-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Architecture API REST</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.hbnb.learnings.item1.title">Architecture API REST</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.hbnb.learnings.item1.body">
             Conception et implémentation d'une API REST complète avec Flask. Compréhension des conventions REST, 
             gestion des endpoints, codes HTTP appropriés, et documentation d'API.
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-green-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">ORM et modélisation de données</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.hbnb.learnings.item2.title">ORM et modélisation de données</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.hbnb.learnings.item2.body">
             Maîtrise de SQLAlchemy pour la gestion des relations complexes (One-to-Many, Many-to-Many). 
             Conception de schémas de base de données relationnelles avec contraintes d'intégrité et cascades.
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-purple-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Sérialisation et validation</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.hbnb.learnings.item3.title">Sérialisation et validation</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.hbnb.learnings.item3.body">
             Implémentation de la sérialisation JSON pour exposer proprement les données via l'API. 
             Validation des données entrantes et sortantes, gestion des erreurs, et formatage cohérent des réponses.
           </p>
@@ -203,10 +208,10 @@
 
     <!-- Navigation -->
     <div class="flex items-center justify-between pt-8 border-t border-slate-200 dark:border-slate-800">
-      <a href="../projects.html" class="btn-ghost">
+      <a href="../projects.html" class="btn-ghost" data-i18n="common.backToProjects">
         ← Retour aux projets
       </a>
-      <a href="../index.html#contact" class="btn-secondary">
+      <a href="../index.html#contact" class="btn-secondary" data-i18n="common.contact">
         Me contacter
       </a>
     </div>
@@ -214,10 +219,11 @@
 
   <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
     <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+      © <span id="year"></span> <span data-i18n="common.footer.copy">Jonas Jungling — Portfolio développeur fullstack</span>
     </p>
   </footer>
 
+  <script src="../assets/translations.js"></script>
   <script src="../assets/script.js"></script>
 </body>
 </html>

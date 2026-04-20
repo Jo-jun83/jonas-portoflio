@@ -2,7 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
-    <title>MoveBy - Jonas Jungling</title>
+    <title id="page-title" data-i18n="projects.moveby.meta.title">MoveBy - Jonas Jungling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,13 +31,18 @@
                 </div>
                 <div class="leading-tight">
                     <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="common.role">Développeur Fullstack</p>
                 </div>
             </a>
 
             <div class="flex items-center gap-4">
-                <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
-                <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
+                <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+                <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+
+                <div class="lang-toggle" role="group" aria-label="Sélecteur de langue" data-i18n-attr="aria-label:common.languageSwitcher">
+                    <button type="button" class="lang-btn" data-lang="fr">FR</button>
+                    <button type="button" class="lang-btn" data-lang="es">ES</button>
+                </div>
 
                 <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
                     <span id="theme-toggle-light" class="hidden">🌞</span>
@@ -50,18 +55,18 @@
     <main class="max-w-5xl mx-auto px-4 pt-6 pb-16">
         <!-- Breadcrumb -->
         <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
-            <a href="../index.html" class="hover:text-sky-500">Accueil</a>
+            <a href="../index.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.home">Accueil</a>
             <span>→</span>
-            <a href="../projects.html" class="hover:text-sky-500">Projets</a>
+            <a href="../projects.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.projects">Projets</a>
             <span>→</span>
-            <span class="text-slate-900 dark:text-slate-100 font-medium">MoveBy</span>
+            <span class="text-slate-900 dark:text-slate-100 font-medium" data-i18n="projects.moveby.breadcrumb.current">MoveBy</span>
         </div>
 
         <!-- Hero Banner -->
         <div class="project-hero flex items-center justify-center mb-8">
             <div class="text-center">
                 <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3">MoveBy</h1>
-                <p class="text-lg text-slate-700 dark:text-slate-300">
+                <p class="text-lg text-slate-700 dark:text-slate-300" data-i18n="projects.moveby.hero.subtitle">
                     SaaS en ligne dédié aux coachs indépendants pour gérer leur activité, leurs réservations et leurs paiements
                 </p>
             </div>
@@ -70,21 +75,23 @@
         <!-- Image projet -->
         <section class="mb-12">
             <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
-                <img src="../assets/img/moveby.png" alt="Capture d’écran de MoveBy" class="w-full h-auto" />
+                <img src="../assets/img/moveby.png" alt="Capture d’écran de MoveBy" data-i18n-attr="alt:projects.moveby.image.alt" class="w-full h-auto" />
             </div>
         </section>
 
         <!-- Vidéo démo -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6">Démo vidéo</h2>
+            <h2 class="text-2xl font-bold mb-6" data-i18n="projects.moveby.demo.title">Démo vidéo</h2>
             <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl bg-black">
                 <video
                     src="../assets/videos/moveby.mp4"
                     controls
                     preload="metadata"
+                    title="Démo MoveBy"
+                    data-i18n-attr="title:projects.moveby.demo.videoTitle"
                     class="w-full h-auto"
                 >
-                    Votre navigateur ne prend pas en charge la lecture vidéo.
+                    <span data-i18n="projects.moveby.demo.fallback">Votre navigateur ne prend pas en charge la lecture vidéo.</span>
                 </video>
             </div>
         </section>
@@ -93,31 +100,31 @@
         <section class="mb-12">
             <div class="grid md:grid-cols-4 gap-4 mb-8">
                 <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Période</p>
-                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Depuis décembre 2025</p>
+                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.moveby.overview.period.label">Période</p>
+                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.moveby.overview.period.value">Depuis décembre 2025</p>
                 </div>
                 <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Type</p>
-                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50">SaaS</p>
+                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.moveby.overview.type.label">Type</p>
+                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.moveby.overview.type.value">SaaS</p>
                 </div>
                 <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Statut</p>
-                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50">En ligne</p>
+                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.moveby.overview.status.label">Statut</p>
+                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.moveby.overview.status.value">En ligne</p>
                 </div>
                 <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Rôle</p>
-                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Fondateur & développeur full-stack</p>
+                    <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.moveby.overview.role.label">Rôle</p>
+                    <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.moveby.overview.role.value">Fondateur & développeur full-stack</p>
                 </div>
             </div>
 
             <div class="prose prose-slate dark:prose-invert max-w-none">
-                <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+                <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4" data-i18n="projects.moveby.overview.description.p1">
                     MoveBy est une plateforme SaaS pensée pour les coachs indépendants afin de centraliser leur activité en un seul endroit. Chaque coach dispose de son propre espace public et de son back-office pour gérer ses cours, ses réservations, ses paiements et sa relation client.
                 </p>
-                <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+                <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4" data-i18n="projects.moveby.overview.description.p2">
                     La plateforme permet aux utilisateurs de découvrir des coachs, consulter leurs offres, réserver en ligne et payer de manière sécurisée. L’architecture a été conçue pour supporter une logique multi-coachs, avec une séparation claire entre les espaces coach, client et administration.
                 </p>
-                <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed">
+                <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.moveby.overview.description.p3">
                     Ce projet représente une évolution complète d’un premier MVP vers un produit SaaS réel, déployé en ligne, avec une approche orientée produit, sécurité, expérience utilisateur et scalabilité.
                 </p>
             </div>
@@ -127,8 +134,8 @@
         <section class="mb-12">
             <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
-                    <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-2">Site en ligne</h2>
-                    <p class="text-sm text-slate-700 dark:text-slate-200">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-2" data-i18n="projects.moveby.live.title">Site en ligne</h2>
+                    <p class="text-sm text-slate-700 dark:text-slate-200" data-i18n="projects.moveby.live.description">
                         MoveBy est accessible en ligne et continue d’évoluer avec une logique produit et SaaS.
                     </p>
                 </div>
@@ -137,6 +144,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-secondary whitespace-nowrap"
+                    data-i18n="projects.moveby.live.link"
                 >
                     Voir le site →
                 </a>
@@ -145,47 +153,47 @@
 
         <!-- Stack technique -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6">Stack technique</h2>
+            <h2 class="text-2xl font-bold mb-6" data-i18n="projects.moveby.stack.title">Stack technique</h2>
             <div class="grid sm:grid-cols-2 gap-6">
                 <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-                    <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Backend</h3>
+                    <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.moveby.stack.backend.title">Backend</h3>
                     <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
                         <div class="flex items-center gap-3">
                             <span class="badge-backend">Flask</span>
-                            <span class="text-xs">API REST et logique métier</span>
+                            <span class="text-xs" data-i18n="projects.moveby.stack.backend.flask">API REST et logique métier</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="badge-database">MySQL</span>
-                            <span class="text-xs">Base de données relationnelle</span>
+                            <span class="text-xs" data-i18n="projects.moveby.stack.backend.mysql">Base de données relationnelle</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="badge-tool">JWT</span>
-                            <span class="text-xs">Authentification sécurisée et gestion des rôles</span>
+                            <span class="text-xs" data-i18n="projects.moveby.stack.backend.jwt">Authentification sécurisée et gestion des rôles</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="badge-tool">Stripe</span>
-                            <span class="text-xs">Paiements en ligne et abonnements</span>
+                            <span class="text-xs" data-i18n="projects.moveby.stack.backend.stripe">Paiements en ligne et abonnements</span>
                         </div>
                     </div>
                 </div>
                 <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-                    <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Frontend</h3>
+                    <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.moveby.stack.frontend.title">Frontend</h3>
                     <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
                         <div class="flex items-center gap-3">
                             <span class="badge-frontend">React</span>
-                            <span class="text-xs">Interface utilisateur</span>
+                            <span class="text-xs" data-i18n="projects.moveby.stack.frontend.react">Interface utilisateur</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="badge-frontend">Next.js</span>
-                            <span class="text-xs">Architecture frontend moderne</span>
+                            <span class="text-xs" data-i18n="projects.moveby.stack.frontend.next">Architecture frontend moderne</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="badge-frontend">TypeScript</span>
-                            <span class="text-xs">Typage et robustesse du code</span>
+                            <span class="text-xs" data-i18n="projects.moveby.stack.frontend.typescript">Typage et robustesse du code</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="badge-frontend">TailwindCSS</span>
-                            <span class="text-xs">Design responsive et styling</span>
+                            <span class="text-xs" data-i18n="projects.moveby.stack.frontend.tailwind">Design responsive et styling</span>
                         </div>
                     </div>
                 </div>
@@ -194,45 +202,45 @@
 
         <!-- Fonctionnalités principales -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6">Fonctionnalités principales</h2>
+            <h2 class="text-2xl font-bold mb-6" data-i18n="projects.moveby.features.title">Fonctionnalités principales</h2>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
                     <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-                        <span class="text-xl">🧑‍💼</span> Côté client
+                        <span class="text-xl">🧑‍💼</span> <span data-i18n="projects.moveby.features.client.title">Côté client</span>
                     </h3>
                     <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-                        <li>• Découverte des coachs et de leurs offres</li>
-                        <li>• Consultation des pages publiques et du planning</li>
-                        <li>• Réservation de cours et d’activités en ligne</li>
-                        <li>• Paiement sécurisé</li>
-                        <li>• Espace client avec suivi des réservations</li>
-                        <li>• Emails de confirmation et de suivi</li>
+                        <li data-i18n="projects.moveby.features.client.item1">• Découverte des coachs et de leurs offres</li>
+                        <li data-i18n="projects.moveby.features.client.item2">• Consultation des pages publiques et du planning</li>
+                        <li data-i18n="projects.moveby.features.client.item3">• Réservation de cours et d’activités en ligne</li>
+                        <li data-i18n="projects.moveby.features.client.item4">• Paiement sécurisé</li>
+                        <li data-i18n="projects.moveby.features.client.item5">• Espace client avec suivi des réservations</li>
+                        <li data-i18n="projects.moveby.features.client.item6">• Emails de confirmation et de suivi</li>
                     </ul>
                 </div>
                 <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
                     <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-                        <span class="text-xl">🗂️</span> Back-office coach
+                        <span class="text-xl">🗂️</span> <span data-i18n="projects.moveby.features.coach.title">Back-office coach</span>
                     </h3>
                     <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-                        <li>• Gestion des cours, offres et réservations</li>
-                        <li>• Gestion du planning et des disponibilités</li>
-                        <li>• Gestion du profil public et des contenus</li>
-                        <li>• Suivi de l’activité et des clients</li>
-                        <li>• Gestion des paiements et de l’organisation</li>
-                        <li>• Accès sécurisé selon le rôle utilisateur</li>
+                        <li data-i18n="projects.moveby.features.coach.item1">• Gestion des cours, offres et réservations</li>
+                        <li data-i18n="projects.moveby.features.coach.item2">• Gestion du planning et des disponibilités</li>
+                        <li data-i18n="projects.moveby.features.coach.item3">• Gestion du profil public et des contenus</li>
+                        <li data-i18n="projects.moveby.features.coach.item4">• Suivi de l’activité et des clients</li>
+                        <li data-i18n="projects.moveby.features.coach.item5">• Gestion des paiements et de l’organisation</li>
+                        <li data-i18n="projects.moveby.features.coach.item6">• Accès sécurisé selon le rôle utilisateur</li>
                     </ul>
                 </div>
             </div>
             <div class="grid md:grid-cols-1 gap-6 mt-6">
                 <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
                     <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-                        <span class="text-xl">🔑</span> Administration & architecture
+                        <span class="text-xl">🔑</span> <span data-i18n="projects.moveby.features.admin.title">Administration & architecture</span>
                     </h3>
                     <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-                        <li>• Gestion multi-coachs et multi-comptes</li>
-                        <li>• API REST complète et sécurisée</li>
-                        <li>• Gestion centralisée des accès et des rôles</li>
-                        <li>• Base solide pour faire évoluer le produit</li>
+                        <li data-i18n="projects.moveby.features.admin.item1">• Gestion multi-coachs et multi-comptes</li>
+                        <li data-i18n="projects.moveby.features.admin.item2">• API REST complète et sécurisée</li>
+                        <li data-i18n="projects.moveby.features.admin.item3">• Gestion centralisée des accès et des rôles</li>
+                        <li data-i18n="projects.moveby.features.admin.item4">• Base solide pour faire évoluer le produit</li>
                     </ul>
                 </div>
             </div>
@@ -240,23 +248,23 @@
 
         <!-- Apprentissages -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-6">Ce que j’ai appris</h2>
+            <h2 class="text-2xl font-bold mb-6" data-i18n="projects.moveby.learnings.title">Ce que j’ai appris</h2>
             <div class="space-y-4">
                 <div class="rounded-xl border-l-4 border-blue-500 bg-white/70 dark:bg-slate-900/60 p-6">
-                    <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Construire un vrai produit SaaS</h3>
-                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                    <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.moveby.learnings.item1.title">Construire un vrai produit SaaS</h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.moveby.learnings.item1.body">
                         MoveBy m’a permis de travailler sur un produit réel, pensé pour des utilisateurs concrets, avec une logique métier forte, des contraintes produit, et une mise en production effective.
                     </p>
                 </div>
                 <div class="rounded-xl border-l-4 border-green-500 bg-white/70 dark:bg-slate-900/60 p-6">
-                    <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Architecture full-stack et sécurité</h3>
-                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                    <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.moveby.learnings.item2.title">Architecture full-stack et sécurité</h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.moveby.learnings.item2.body">
                         J’ai renforcé mes compétences en conception d’API REST, gestion des rôles, authentification sécurisée, structuration backend, intégration Stripe et organisation d’un frontend moderne avec Next.js.
                     </p>
                 </div>
                 <div class="rounded-xl border-l-4 border-purple-500 bg-white/70 dark:bg-slate-900/60 p-6">
-                    <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Vision produit et évolution continue</h3>
-                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                    <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.moveby.learnings.item3.title">Vision produit et évolution continue</h3>
+                    <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.moveby.learnings.item3.body">
                         Ce projet m’a appris à faire évoluer un MVP en plateforme plus ambitieuse, à prioriser les besoins, améliorer l’expérience utilisateur et penser le développement avec une logique de déploiement, maintenance et croissance.
                     </p>
                 </div>
@@ -265,10 +273,10 @@
 
         <!-- Navigation -->
         <div class="flex items-center justify-between pt-8 border-t border-slate-200 dark:border-slate-800">
-            <a href="../projects.html" class="btn-ghost">
+            <a href="../projects.html" class="btn-ghost" data-i18n="common.backToProjects">
                 ← Retour aux projets
             </a>
-            <a href="../index.html#contact" class="btn-secondary">
+            <a href="../index.html#contact" class="btn-secondary" data-i18n="common.contact">
                 Me contacter
             </a>
         </div>
@@ -276,10 +284,11 @@
 
     <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
         <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-            © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+            © <span id="year"></span> <span data-i18n="common.footer.copy">Jonas Jungling — Portfolio développeur fullstack</span>
         </p>
     </footer>
 
+    <script src="../assets/translations.js"></script>
     <script src="../assets/script.js"></script>
 </body>
 </html>

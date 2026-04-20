@@ -2,7 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>Simple Shell - Jonas Jungling</title>
+  <title id="page-title" data-i18n="projects.simpleShell.meta.title">Simple Shell - Jonas Jungling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,13 +31,18 @@
         </div>
         <div class="leading-tight">
           <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="common.role">Développeur Fullstack</p>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
-        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
+        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+
+        <div class="lang-toggle" role="group" aria-label="Sélecteur de langue" data-i18n-attr="aria-label:common.languageSwitcher">
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
 
         <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
           <span id="theme-toggle-light" class="hidden">🌞</span>
@@ -50,25 +55,25 @@
   <main class="max-w-5xl mx-auto px-4 pt-6 pb-16">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
-      <a href="../index.html" class="hover:text-sky-500">Accueil</a>
+      <a href="../index.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.home">Accueil</a>
       <span>→</span>
-      <a href="../projects.html" class="hover:text-sky-500">Projets</a>
+      <a href="../projects.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.projects">Projets</a>
       <span>→</span>
-      <span class="text-slate-900 dark:text-slate-100 font-medium">Simple Shell</span>
+      <span class="text-slate-900 dark:text-slate-100 font-medium" data-i18n="projects.simpleShell.breadcrumb.current">Simple Shell</span>
     </div>
 
     <!-- Hero Banner -->
     <div class="project-hero flex items-center justify-center mb-8">
       <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3">Simple Shell</h1>
-        <p class="text-lg text-slate-700 dark:text-slate-300">Interpréteur de commandes UNIX en C</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="projects.simpleShell.hero.title">Simple Shell</h1>
+        <p class="text-lg text-slate-700 dark:text-slate-300" data-i18n="projects.simpleShell.hero.subtitle">Interpréteur de commandes UNIX en C</p>
       </div>
     </div>
 
     <!-- Image projet -->
     <section class="mb-12">
       <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
-        <img src="../assets/img/simple_shell.png" alt="Simple Shell screenshot" class="w-full h-auto" />
+        <img src="../assets/img/simple_shell.png" alt="Simple Shell screenshot" data-i18n-attr="alt:projects.simpleShell.image.alt" class="w-full h-auto" />
       </div>
     </section>
 
@@ -76,25 +81,25 @@
     <section class="mb-12">
       <div class="grid md:grid-cols-3 gap-4 mb-8">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Période</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Décembre 2024</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.simpleShell.overview.period.label">Période</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.simpleShell.overview.period.value">Décembre 2024</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Langage</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">C</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.simpleShell.overview.language.label">Langage</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.simpleShell.overview.language.value">C</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Contexte</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Holberton School</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.simpleShell.overview.context.label">Contexte</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.simpleShell.overview.context.value">Holberton School</p>
         </div>
       </div>
 
       <div class="prose prose-slate dark:prose-invert max-w-none">
-        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4" data-i18n="projects.simpleShell.overview.description.p1">
           Simple Shell est une implémentation d'un interpréteur de commandes UNIX simplifié, développé entièrement en C. 
           Le programme est capable de fonctionner en mode interactif (avec prompt) et en mode non-interactif (exécution de scripts).
         </p>
-        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed">
+        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.simpleShell.overview.description.p2">
           Ce projet a permis d'approfondir la compréhension des processus UNIX, de la gestion mémoire en C, 
           et des mécanismes de fork/exec au cœur des systèmes d'exploitation.
         </p>
@@ -103,7 +108,7 @@
 
     <!-- Stack technique -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Technologies utilisées</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.simpleShell.stack.title">Technologies utilisées</h2>
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
         <div class="flex flex-wrap gap-3">
           <span class="badge-tool">C</span>
@@ -118,24 +123,24 @@
 
     <!-- Features principales -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Fonctionnalités implémentées</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.simpleShell.features.title">Fonctionnalités implémentées</h2>
       <div class="grid gap-4">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50">Exécution de commandes</h3>
+          <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50" data-i18n="projects.simpleShell.features.exec.title">Exécution de commandes</h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• Exécution de commandes simples avec arguments</li>
-            <li>• Recherche dans le PATH</li>
-            <li>• Gestion des chemins absolus et relatifs</li>
-            <li>• Support des commandes built-in (exit, env, setenv, unsetenv)</li>
+            <li data-i18n="projects.simpleShell.features.exec.item1">• Exécution de commandes simples avec arguments</li>
+            <li data-i18n="projects.simpleShell.features.exec.item2">• Recherche dans le PATH</li>
+            <li data-i18n="projects.simpleShell.features.exec.item3">• Gestion des chemins absolus et relatifs</li>
+            <li data-i18n="projects.simpleShell.features.exec.item4">• Support des commandes built-in (exit, env, setenv, unsetenv)</li>
           </ul>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50">Parsing & Gestion d'erreurs</h3>
+          <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50" data-i18n="projects.simpleShell.features.parse.title">Parsing & Gestion d'erreurs</h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• Parsing des entrées utilisateur</li>
-            <li>• Gestion des erreurs d'exécution</li>
-            <li>• Messages d'erreur appropriés</li>
-            <li>• Gestion du signal EOF (Ctrl+D)</li>
+            <li data-i18n="projects.simpleShell.features.parse.item1">• Parsing des entrées utilisateur</li>
+            <li data-i18n="projects.simpleShell.features.parse.item2">• Gestion des erreurs d'exécution</li>
+            <li data-i18n="projects.simpleShell.features.parse.item3">• Messages d'erreur appropriés</li>
+            <li data-i18n="projects.simpleShell.features.parse.item4">• Gestion du signal EOF (Ctrl+D)</li>
           </ul>
         </div>
       </div>
@@ -143,25 +148,25 @@
 
     <!-- Défis techniques -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Défis techniques</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.simpleShell.challenges.title">Défis techniques</h2>
       <div class="space-y-4">
         <div class="rounded-xl border-l-4 border-red-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Gestion de la mémoire</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.simpleShell.challenges.item1.title">Gestion de la mémoire</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.simpleShell.challenges.item1.body">
             En C, toute allocation dynamique doit être libérée manuellement. Le projet a nécessité une attention particulière 
             pour éviter les fuites mémoire (memory leaks), notamment lors du parsing et de la gestion des chaînes de caractères.
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-orange-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Fork & Exec</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.simpleShell.challenges.item2.title">Fork & Exec</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.simpleShell.challenges.item2.body">
             Compréhension approfondie des processus UNIX : création de processus fils avec fork(), 
             remplacement du processus avec exec(), et gestion du processus parent avec wait().
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-yellow-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Parsing robuste</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.simpleShell.challenges.item3.title">Parsing robuste</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.simpleShell.challenges.item3.body">
             Développement d'un parser capable de traiter correctement les espaces, les arguments multiples, 
             et de gérer les cas limites (entrée vide, commandes inexistantes, etc.).
           </p>
@@ -172,8 +177,8 @@
     <!-- Liens -->
     <section class="mb-12">
       <div class="rounded-2xl border-2 border-sky-200 dark:border-sky-900 bg-gradient-to-br from-sky-50 to-white dark:from-slate-900 dark:to-slate-800 p-8 text-center">
-        <h2 class="text-xl font-bold mb-6">Découvrir le code</h2>
-        <a href="https://github.com/Jo-jun83/holbertonschool-simple_shell" target="_blank" class="btn-primary">
+        <h2 class="text-xl font-bold mb-6" data-i18n="projects.simpleShell.links.title">Découvrir le code</h2>
+        <a href="https://github.com/Jo-jun83/holbertonschool-simple_shell" target="_blank" class="btn-primary" aria-label="Voir sur GitHub Simple Shell" data-i18n-attr="aria-label:projects.simpleShell.links.githubAria">
           🐙 Voir sur GitHub
         </a>
       </div>
@@ -181,10 +186,10 @@
 
     <!-- Navigation -->
     <div class="flex items-center justify-between pt-8 border-t border-slate-200 dark:border-slate-800">
-      <a href="../projects.html" class="btn-ghost">
+      <a href="../projects.html" class="btn-ghost" data-i18n="common.backToProjects">
         ← Retour aux projets
       </a>
-      <a href="../index.html#contact" class="btn-secondary">
+      <a href="../index.html#contact" class="btn-secondary" data-i18n="common.contact">
         Me contacter
       </a>
     </div>
@@ -192,10 +197,11 @@
 
   <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
     <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+      © <span id="year"></span> <span data-i18n="common.footer.copy">Jonas Jungling — Portfolio développeur fullstack</span>
     </p>
   </footer>
 
+  <script src="../assets/translations.js"></script>
   <script src="../assets/script.js"></script>
 </body>
 </html>

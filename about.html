@@ -2,7 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>À propos - Jonas Jungling</title>
+  <title id="page-title" data-i18n="about.meta.title">À propos - Jonas Jungling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,14 +31,19 @@
         </div>
         <div class="leading-tight">
           <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="common.role">Développeur Fullstack</p>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
-        <a href="about.html" class="text-sm text-sky-600 dark:text-sky-400 font-medium">À propos</a>
-        <a href="index.html#contact" class="hidden sm:inline text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Contact</a>
+        <a href="projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+        <a href="about.html" class="text-sm text-sky-600 dark:text-sky-400 font-medium" data-i18n="common.nav.about">À propos</a>
+        <a href="index.html#contact" class="hidden sm:inline text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.contact">Contact</a>
+
+        <div class="lang-toggle" role="group" aria-label="Sélecteur de langue" data-i18n-attr="aria-label:common.languageSwitcher">
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
 
         <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
           <span id="theme-toggle-light" class="hidden">🌞</span>
@@ -57,7 +62,8 @@
           <div class="flex-shrink-0">
             <img 
               src="assets/img/jonas.jpg" 
-              alt="Jonas Jungling" 
+              alt="Jonas Jungling"
+              data-i18n-attr="alt:about.hero.photoAlt"
               class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-2xl shadow-sky-500/20"
             />
           </div>
@@ -65,17 +71,17 @@
           <!-- Texte d'introduction -->
           <div class="flex-1 text-center md:text-left">
             <h1 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-sky-600 to-purple-600 bg-clip-text text-transparent">
-              Jonas Jungling
+              <span data-i18n="about.hero.name">Jonas Jungling</span>
             </h1>
-            <p class="text-xl sm:text-2xl font-semibold text-slate-700 dark:text-slate-200 mb-4">
+            <p class="text-xl sm:text-2xl font-semibold text-slate-700 dark:text-slate-200 mb-4" data-i18n="common.role">
               Développeur Fullstack
             </p>
-            <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-6">
+            <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-6" data-i18n="about.hero.description">
               Passionné par le développement web, je conçois des applications complètes et robustes. Formé à Holberton School et O’Clock, fondateur de MoveBy, je recherche un CDI pour continuer à évoluer en tant que développeur.
             </p>
             <div class="flex flex-wrap gap-3 justify-center md:justify-start">
               <a href="index.html#contact" class="btn-primary group">
-                <span>Me contacter</span>
+                <span data-i18n="common.contact">Me contacter</span>
                 <span class="icon-wrapper">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,7 +89,7 @@
                 </span>
               </a>
               <a href="projects.html" class="btn-secondary group">
-                <span>Voir mes projets</span>
+                <span data-i18n="about.hero.ctaProjects">Voir mes projets</span>
                 <span class="icon-arrow-wrapper">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -101,76 +107,76 @@
     <section class="space-y-8 text-sm sm:text-base text-slate-700 dark:text-slate-200">
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 md:p-8 hover:shadow-lg transition-shadow duration-200">
         <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-          <span class="text-2xl">👤</span> Qui je suis
+          <span class="text-2xl">👤</span> <span data-i18n="about.sections.who.title">Qui je suis</span>
         </h2>
-        <p class="mb-4 leading-relaxed">
+        <p class="mb-4 leading-relaxed" data-i18n="about.sections.who.p1">
           Je m’appelle Jonas, développeur full-stack en reconversion professionnelle. Après une première carrière en dehors de la tech, j’ai choisi de me former sérieusement au développement web pour en faire un métier durable, exigeant et stimulant.
         </p>
-        <p class="mb-4 leading-relaxed">
+        <p class="mb-4 leading-relaxed" data-i18n="about.sections.who.p2">
           Mon parcours m’a permis de développer une approche à la fois humaine et rigoureuse du travail : sens des responsabilités, capacité d’adaptation, esprit d’équipe et volonté de progresser en continu.
         </p>
-        <p class="leading-relaxed">
+        <p class="leading-relaxed" data-i18n="about.sections.who.p3">
           Aujourd’hui, je conçois des applications utiles, bien pensées et techniquement solides, avec une attention particulière portée à la qualité du code, à la logique métier et à la robustesse de l’architecture.
         </p>
       </div>
 
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 md:p-8 hover:shadow-lg transition-shadow duration-200">
         <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-          <span class="text-2xl">🏫</span> Formation & reconversion
+          <span class="text-2xl">🏫</span> <span data-i18n="about.sections.training.title">Formation & reconversion</span>
         </h2>
-        <p class="mb-4 leading-relaxed">
+        <p class="mb-4 leading-relaxed" data-i18n="about.sections.training.p1">
           J’ai d’abord découvert le développement web lors d’une formation chez O’Clock, 
           où j’ai réalisé des projets comme <strong>O’Scour</strong> et <strong>O’Flix</strong> en PHP/Symfony.
         </p>
-        <p class="mb-4 leading-relaxed">
+        <p class="mb-4 leading-relaxed" data-i18n="about.sections.training.p2">
           Ensuite, j'ai intégré <strong>Holberton School</strong>, une formation intensive orientée projet, 
           où j'ai approfondi :
         </p>
         <ul class="list-disc list-inside space-y-2 ml-2">
-          <li>la programmation en C et les notions bas niveau ;</li>
-          <li>les systèmes et le shell (projet simple_shell) ;</li>
-          <li>la conception d’API back-end (Flask, MySQL, SQLAlchemy) ;</li>
-          <li>les bonnes pratiques de sécurité (authentification, JWT, rôles).</li>
+          <li data-i18n="about.sections.training.item1">la programmation en C et les notions bas niveau ;</li>
+          <li data-i18n="about.sections.training.item2">les systèmes et le shell (projet simple_shell) ;</li>
+          <li data-i18n="about.sections.training.item3">la conception d’API back-end (Flask, MySQL, SQLAlchemy) ;</li>
+          <li data-i18n="about.sections.training.item4">les bonnes pratiques de sécurité (authentification, JWT, rôles).</li>
         </ul>
       </div>
 
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 md:p-8 hover:shadow-lg transition-shadow duration-200">
         <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-          <span class="text-2xl">🚀</span> Projets marquants
+          <span class="text-2xl">🚀</span> <span data-i18n="about.sections.highlights.title">Projets marquants</span>
         </h2>
-        <p class="mb-4 leading-relaxed">
+        <p class="mb-4 leading-relaxed" data-i18n="about.sections.highlights.p1">
           Parmi les projets qui ont le plus marqué mon parcours :
         </p>
         <ul class="list-disc list-inside space-y-1">
-          <li><strong>MoveBy</strong> : plateforme SaaS en ligne dédiée aux coachs indépendants, avec espace client, back-office, réservations, paiements et logique produit complète.</li>
-          <li><strong>Feminapedia</strong> : site web conçu pour des kinés, avec une approche orientée contenu, clarté de l’information et expérience utilisateur.</li>
-          <li><strong>HBnB</strong> : modélisation d’un mini-Airbnb avec API REST.</li>
-          <li><strong>simple_shell</strong> et <strong>_printf</strong> : projets en C qui m’ont appris à être rigoureux sur la mémoire, la logique et la structure du code.</li>
+          <li data-i18n="about.sections.highlights.item1"><strong>MoveBy</strong> : plateforme SaaS en ligne dédiée aux coachs indépendants, avec espace client, back-office, réservations, paiements et logique produit complète.</li>
+          <li data-i18n="about.sections.highlights.item2"><strong>Feminapedia</strong> : site web conçu pour des kinés, avec une approche orientée contenu, clarté de l’information et expérience utilisateur.</li>
+          <li data-i18n="about.sections.highlights.item3"><strong>HBnB</strong> : modélisation d’un mini-Airbnb avec API REST.</li>
+          <li data-i18n="about.sections.highlights.item4"><strong>simple_shell</strong> et <strong>_printf</strong> : projets en C qui m’ont appris à être rigoureux sur la mémoire, la logique et la structure du code.</li>
         </ul>
       </div>
 
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 md:p-8 hover:shadow-lg transition-shadow duration-200">
         <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-          <span class="text-2xl">🎯</span> Ce que je recherche
+          <span class="text-2xl">🎯</span> <span data-i18n="about.sections.goals.title">Ce que je recherche</span>
         </h2>
-        <p class="mb-4 leading-relaxed">
+        <p class="mb-4 leading-relaxed" data-i18n="about.sections.goals.p1">
           Je recherche un <strong>CDI</strong> en développement web / full-stack, au sein d’une équipe où je pourrai contribuer à des projets concrets et continuer à progresser techniquement.
         </p>
-        <p class="mb-3 leading-relaxed">
+        <p class="mb-3 leading-relaxed" data-i18n="about.sections.goals.p2">
           J’apprécie particulièrement :
         </p>
         <ul class="list-disc list-inside space-y-2 ml-2">
-          <li>concevoir des API et des back-ends robustes ;</li>
-          <li>comprendre les besoins métier pour construire des solutions adaptées ;</li>
-          <li>faire évoluer la qualité du code à travers les tests, le refactoring et la sécurité.</li>
+          <li data-i18n="about.sections.goals.item1">concevoir des API et des back-ends robustes ;</li>
+          <li data-i18n="about.sections.goals.item2">comprendre les besoins métier pour construire des solutions adaptées ;</li>
+          <li data-i18n="about.sections.goals.item3">faire évoluer la qualité du code à travers les tests, le refactoring et la sécurité.</li>
         </ul>
       </div>
 
       <div class="rounded-2xl border-2 border-sky-200 dark:border-sky-900 bg-gradient-to-br from-sky-50 to-white dark:from-slate-900 dark:to-slate-800 p-6 md:p-8 shadow-lg">
         <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-          <span class="text-2xl">📧</span> Me contacter
+          <span class="text-2xl">📧</span> <span data-i18n="about.sections.contact.title">Me contacter</span>
         </h2>
-        <p class="mb-4 leading-relaxed">
+        <p class="mb-4 leading-relaxed" data-i18n="about.sections.contact.p1">
           Si vous pensez que mon profil peut correspondre à vos besoins ou à votre équipe, 
           je serai ravi d'échanger.
         </p>
@@ -190,18 +196,18 @@
                 <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <a href="https://www.linkedin.com/in/jonas-jungling" target="_blank" class="link-contact">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/jonas-jungling" target="_blank" class="link-contact" data-i18n="about.sections.contact.linkedin">LinkedIn</a>
           </p>
         </div>
         <div class="mt-6 pt-6 border-t border-sky-200 dark:border-sky-900">
-          <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-primary group" download>
+          <a href="assets/cv/jonas-jungling-cv-FR.pdf" class="btn-primary group" download="CV-Jonas-Jungling-FR.pdf" data-i18n-attr="href:common.cv.file;download:common.cv.filename">
             <span class="icon-wrapper">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <span>Télécharger mon CV</span>
+            <span data-i18n="common.cv.download">Télécharger mon CV</span>
           </a>
         </div>
       </div>
@@ -210,15 +216,16 @@
 
   <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
     <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+      © <span id="year"></span> <span data-i18n="common.footer.copy">Jonas Jungling — Portfolio développeur fullstack</span>
     </p>
     <div class="flex items-center justify-center gap-4 text-xs">
-      <a href="projects.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Projets</a>
-      <a href="about.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">À propos</a>
-      <a href="index.html#contact" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Contact</a>
+      <a href="projects.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+      <a href="about.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+      <a href="index.html#contact" class="text-slate-500 dark:text-slate-400 hover:text-sky-500" data-i18n="common.nav.contact">Contact</a>
     </div>
   </footer>
 
+  <script src="assets/translations.js"></script>
   <script src="assets/script.js"></script>
 </body>
 </html>

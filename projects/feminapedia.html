@@ -2,7 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>feminapedia - Jonas Jungling</title>
+  <title id="page-title" data-i18n="projects.feminapedia.meta.title">feminapedia - Jonas Jungling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,13 +31,18 @@
         </div>
         <div class="leading-tight">
           <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="common.role">Développeur Fullstack</p>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
-        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
+        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+
+        <div class="lang-toggle" role="group" aria-label="Sélecteur de langue" data-i18n-attr="aria-label:common.languageSwitcher">
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
 
         <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
           <span id="theme-toggle-light" class="hidden">🌞</span>
@@ -50,18 +55,18 @@
   <main class="max-w-5xl mx-auto px-4 pt-6 pb-16">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
-      <a href="../index.html" class="hover:text-sky-500">Accueil</a>
+      <a href="../index.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.home">Accueil</a>
       <span>→</span>
-      <a href="../projects.html" class="hover:text-sky-500">Projets</a>
+      <a href="../projects.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.projects">Projets</a>
       <span>→</span>
-      <span class="text-slate-900 dark:text-slate-100 font-medium">feminapedia</span>
+      <span class="text-slate-900 dark:text-slate-100 font-medium" data-i18n="projects.feminapedia.breadcrumb.current">feminapedia</span>
     </div>
 
     <!-- Hero Banner + Image -->
     <div class="project-hero mb-8">
-      <h1 class="text-4xl text-center sm:text-5xl font-bold text-slate-900 dark:text-white mb-3">Feminapedia</h1>
+      <h1 class="text-4xl text-center sm:text-5xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="projects.feminapedia.hero.title">Feminapedia</h1>
       <div class="flex items-center justify-center h-full">
-        <img src="../assets/img/feminapedia.png" alt="feminapedia" class="object-cover w-full h-full" />
+        <img src="../assets/img/feminapedia.png" alt="feminapedia" data-i18n-attr="alt:projects.feminapedia.image.alt" class="object-cover w-full h-full" />
       </div>
     </div>
 
@@ -69,21 +74,21 @@
     <section class="mb-12">
       <div class="grid md:grid-cols-3 gap-4 mb-8">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Période</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Décembre 2025</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.feminapedia.overview.period.label">Période</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.feminapedia.overview.period.value">Décembre 2025</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Type</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Site vitrine</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.feminapedia.overview.type.label">Type</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.feminapedia.overview.type.value">Site vitrine</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Lien</p>
-          <p class="text-base font-semibold text-sky-600 dark:text-sky-400"><a href="https://feminapedia.fr/" target="_blank">Voir en ligne ↗</a></p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.feminapedia.overview.link.label">Lien</p>
+          <p class="text-base font-semibold text-sky-600 dark:text-sky-400"><a href="https://feminapedia.fr/" target="_blank" data-i18n="projects.feminapedia.overview.link.value">Voir en ligne ↗</a></p>
         </div>
       </div>
 
       <div class="prose prose-slate dark:prose-invert max-w-none">
-        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4" data-i18n="projects.feminapedia.overview.description">
           Site vitrine réalisé pour deux kinésithérapeutes : pages de présentation, services, prise de contact via formulaire,
           et optimisation responsive. Le design met l'accent sur la lisibilité, l'accessibilité et la conversion des visiteurs en patients.
         </p>
@@ -92,29 +97,29 @@
 
     <!-- Stack technique -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Stack technique</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.feminapedia.stack.title">Stack technique</h2>
       <div class="grid sm:grid-cols-2 gap-6">
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Frontend</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.feminapedia.stack.frontend.title">Frontend</h3>
           <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
             <div class="flex items-center gap-3">
               <span class="badge-frontend">HTML5</span>
-              <span class="text-xs">Structure sémantique</span>
+              <span class="text-xs" data-i18n="projects.feminapedia.stack.frontend.html">Structure sémantique</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-frontend">CSS3</span>
-              <span class="text-xs">Responsive & animations</span>
+              <span class="text-xs" data-i18n="projects.feminapedia.stack.frontend.css">Responsive & animations</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-frontend">JavaScript</span>
-              <span class="text-xs">Formulaire & validations</span>
+              <span class="text-xs" data-i18n="projects.feminapedia.stack.frontend.js">Formulaire & validations</span>
             </div>
           </div>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Accessibilité</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.feminapedia.stack.accessibility.title">Accessibilité</h3>
           <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
-            <p>WCAG basics: labels, focus states, contrast, semantic landmarks.</p>
+            <p data-i18n="projects.feminapedia.stack.accessibility.body">WCAG basics: labels, focus states, contrast, semantic landmarks.</p>
           </div>
         </div>
       </div>
@@ -122,41 +127,41 @@
 
     <!-- Fonctionnalités -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Fonctionnalités</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.feminapedia.features.title">Fonctionnalités</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50">Pages</h3>
+          <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50" data-i18n="projects.feminapedia.features.pages.title">Pages</h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• Accueil & bio des praticiens</li>
-            <li>• Services & tarifs</li>
-            <li>• Blog / actualités (simple)</li>
-            <li>• Formulaire contact avec envoi mail</li>
+            <li data-i18n="projects.feminapedia.features.pages.item1">• Accueil & bio des praticiens</li>
+            <li data-i18n="projects.feminapedia.features.pages.item2">• Services & tarifs</li>
+            <li data-i18n="projects.feminapedia.features.pages.item3">• Blog / actualités (simple)</li>
+            <li data-i18n="projects.feminapedia.features.pages.item4">• Formulaire contact avec envoi mail</li>
           </ul>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50">Formulaire</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200">Formulaire de prise de contact avec validation JS, gestion des erreurs et message de confirmation. Peut être relié à un back-end ou service email.</p>
+          <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50" data-i18n="projects.feminapedia.features.form.title">Formulaire</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200" data-i18n="projects.feminapedia.features.form.body">Formulaire de prise de contact avec validation JS, gestion des erreurs et message de confirmation. Peut être relié à un back-end ou service email.</p>
         </div>
       </div>
     </section>
 
     <!-- Ce que j'ai appris -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Ce que j'ai appris</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.feminapedia.learnings.title">Ce que j'ai appris</h2>
       <div class="space-y-4">
         <div class="rounded-xl border-l-4 border-blue-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Design orienté conversion</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">Optimiser l'information pour faciliter la prise de contact et rassurer le patient (témoignages, process, accès rapide au formulaire).</p>
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.feminapedia.learnings.item1.title">Design orienté conversion</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.feminapedia.learnings.item1.body">Optimiser l'information pour faciliter la prise de contact et rassurer le patient (témoignages, process, accès rapide au formulaire).</p>
         </div>
       </div>
     </section>
 
     <!-- Navigation -->
     <div class="flex items-center justify-between pt-8 border-t border-slate-200 dark:border-slate-800">
-      <a href="../projects.html" class="btn-ghost">
+      <a href="../projects.html" class="btn-ghost" data-i18n="common.backToProjects">
         ← Retour aux projets
       </a>
-      <a href="../index.html#contact" class="btn-secondary">
+      <a href="../index.html#contact" class="btn-secondary" data-i18n="common.contact">
         Me contacter
       </a>
     </div>
@@ -164,10 +169,11 @@
 
   <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
     <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+      © <span id="year"></span> <span data-i18n="common.footer.copy">Jonas Jungling — Portfolio développeur fullstack</span>
     </p>
   </footer>
 
+  <script src="../assets/translations.js"></script>
   <script src="../assets/script.js"></script>
 </body>
 </html>

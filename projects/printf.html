@@ -2,7 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>_printf - Jonas Jungling</title>
+  <title id="page-title" data-i18n="projects.printf.meta.title">_printf - Jonas Jungling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,13 +31,18 @@
         </div>
         <div class="leading-tight">
           <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="common.role">Développeur Fullstack</p>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
-        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
+        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+
+        <div class="lang-toggle" role="group" aria-label="Sélecteur de langue" data-i18n-attr="aria-label:common.languageSwitcher">
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
 
         <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
           <span id="theme-toggle-light" class="hidden">🌞</span>
@@ -50,25 +55,25 @@
   <main class="max-w-5xl mx-auto px-4 pt-6 pb-16">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
-      <a href="../index.html" class="hover:text-sky-500">Accueil</a>
+      <a href="../index.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.home">Accueil</a>
       <span>→</span>
-      <a href="../projects.html" class="hover:text-sky-500">Projets</a>
+      <a href="../projects.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.projects">Projets</a>
       <span>→</span>
-      <span class="text-slate-900 dark:text-slate-100 font-medium">_printf</span>
+      <span class="text-slate-900 dark:text-slate-100 font-medium" data-i18n="projects.printf.breadcrumb.current">_printf</span>
     </div>
 
     <!-- Hero Banner -->
     <div class="project-hero flex items-center justify-center mb-8">
       <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3">_printf</h1>
-        <p class="text-lg text-slate-700 dark:text-slate-300">Recréation de la fonction printf en C</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="projects.printf.hero.title">_printf</h1>
+        <p class="text-lg text-slate-700 dark:text-slate-300" data-i18n="projects.printf.hero.subtitle">Recréation de la fonction printf en C</p>
       </div>
     </div>
 
     <!-- Image projet -->
     <section class="mb-12">
       <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
-        <img src="../assets/img/printf.jpg" alt="_printf screenshot" class="w-full h-auto" />
+        <img src="../assets/img/printf.jpg" alt="_printf screenshot" data-i18n-attr="alt:projects.printf.image.alt" class="w-full h-auto" />
       </div>
     </section>
 
@@ -76,16 +81,16 @@
     <section class="mb-12">
       <div class="grid md:grid-cols-3 gap-4 mb-8">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Période</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Novembre 2024</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.printf.overview.period.label">Période</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.printf.overview.period.value">Novembre 2024</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Type</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Programmation C</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.printf.overview.type.label">Type</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.printf.overview.type.value">Programmation C</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Contexte</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Holberton School</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.printf.overview.context.label">Contexte</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.printf.overview.context.value">Holberton School</p>
         </div>
       </div>
 
@@ -105,21 +110,21 @@
 
     <!-- Stack technique -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Stack technique</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.printf.stack.title">Stack technique</h2>
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-        <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Langage & Outils</h3>
+        <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.printf.stack.tools.title">Langage & Outils</h3>
         <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
           <div class="flex items-center gap-3">
             <span class="badge-tool">C</span>
-            <span class="text-xs">Langage bas niveau</span>
+            <span class="text-xs" data-i18n="projects.printf.stack.tools.c">Langage bas niveau</span>
           </div>
           <div class="flex items-center gap-3">
             <span class="badge-tool">Variadic Functions</span>
-            <span class="text-xs">va_list, va_start, va_arg</span>
+            <span class="text-xs" data-i18n="projects.printf.stack.tools.variadic">va_list, va_start, va_arg</span>
           </div>
           <div class="flex items-center gap-3">
             <span class="badge-tool">Manpage</span>
-            <span class="text-xs">Documentation complète</span>
+            <span class="text-xs" data-i18n="projects.printf.stack.tools.manpage">Documentation complète</span>
           </div>
         </div>
       </div>
@@ -127,11 +132,11 @@
 
     <!-- Features principales -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Fonctionnalités implémentées</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.printf.features.title">Fonctionnalités implémentées</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
           <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-            <span class="text-xl">📝</span> Spécificateurs de format
+            <span class="text-xl">📝</span> <span data-i18n="projects.printf.features.specs.title">Spécificateurs de format</span>
           </h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
             <li>• <code class="px-1.5 py-0.5 bg-slate-200 dark:bg-slate-800 rounded text-xs">%c</code> : caractère unique</li>
@@ -142,13 +147,13 @@
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
           <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-            <span class="text-xl">⚙️</span> Mécanismes internes
+            <span class="text-xl">⚙️</span> <span data-i18n="projects.printf.features.internal.title">Mécanismes internes</span>
           </h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• Arguments variadiques via va_list</li>
-            <li>• Parsing et dispatch des flags</li>
-            <li>• Gestion des conditions et erreurs</li>
-            <li>• Buffer de sortie optimisé</li>
+            <li data-i18n="projects.printf.features.internal.item1">• Arguments variadiques via va_list</li>
+            <li data-i18n="projects.printf.features.internal.item2">• Parsing et dispatch des flags</li>
+            <li data-i18n="projects.printf.features.internal.item3">• Gestion des conditions et erreurs</li>
+            <li data-i18n="projects.printf.features.internal.item4">• Buffer de sortie optimisé</li>
           </ul>
         </div>
       </div>
@@ -156,17 +161,17 @@
 
     <!-- Apprentissages -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Ce que j'ai appris</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.printf.learnings.title">Ce que j'ai appris</h2>
       <div class="space-y-4">
         <div class="rounded-xl border-l-4 border-blue-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Programmation bas niveau</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.printf.learnings.item1.title">Programmation bas niveau</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.printf.learnings.item1.body">
             Compréhension approfondie du fonctionnement de la bibliothèque standard C. Manipulation directe de la mémoire, 
             gestion des pointeurs, et optimisation des performances sans abstractions de haut niveau.
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-green-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Arguments variadiques</h3>
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.printf.learnings.item2.title">Arguments variadiques</h3>
           <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
             Maîtrise des fonctions variadiques en C avec <code class="px-1.5 py-0.5 bg-slate-200 dark:bg-slate-800 rounded text-xs">va_list</code>, 
             <code class="px-1.5 py-0.5 bg-slate-200 dark:bg-slate-800 rounded text-xs">va_start</code>, 
@@ -176,8 +181,8 @@
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-purple-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Architecture modulaire</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.printf.learnings.item3.title">Architecture modulaire</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.printf.learnings.item3.body">
             Conception d'une architecture propre avec système de dispatch pour traiter chaque spécificateur. 
             Code modulaire et maintenable permettant d'ajouter facilement de nouveaux formats.
           </p>
@@ -187,10 +192,10 @@
 
     <!-- Navigation -->
     <div class="flex items-center justify-between pt-8 border-t border-slate-200 dark:border-slate-800">
-      <a href="../projects.html" class="btn-ghost">
+      <a href="../projects.html" class="btn-ghost" data-i18n="common.backToProjects">
         ← Retour aux projets
       </a>
-      <a href="../index.html#contact" class="btn-secondary">
+      <a href="../index.html#contact" class="btn-secondary" data-i18n="common.contact">
         Me contacter
       </a>
     </div>
@@ -198,10 +203,11 @@
 
   <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
     <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+      © <span id="year"></span> <span data-i18n="common.footer.copy">Jonas Jungling — Portfolio développeur fullstack</span>
     </p>
   </footer>
 
+  <script src="../assets/translations.js"></script>
   <script src="../assets/script.js"></script>
 </body>
 </html>

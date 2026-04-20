@@ -2,7 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>O'Scour - Jonas Jungling</title>
+  <title id="page-title" data-i18n="projects.oscour.meta.title">O'Scour - Jonas Jungling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,13 +31,18 @@
         </div>
         <div class="leading-tight">
           <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="common.role">Développeur Fullstack</p>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
-        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
+        <a href="../projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+        <a href="../about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+
+        <div class="lang-toggle" role="group" aria-label="Sélecteur de langue" data-i18n-attr="aria-label:common.languageSwitcher">
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
 
         <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
           <span id="theme-toggle-light" class="hidden">🌞</span>
@@ -50,25 +55,25 @@
   <main class="max-w-5xl mx-auto px-4 pt-6 pb-16">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
-      <a href="../index.html" class="hover:text-sky-500">Accueil</a>
+      <a href="../index.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.home">Accueil</a>
       <span>→</span>
-      <a href="../projects.html" class="hover:text-sky-500">Projets</a>
+      <a href="../projects.html" class="hover:text-sky-500" data-i18n="common.breadcrumb.projects">Projets</a>
       <span>→</span>
-      <span class="text-slate-900 dark:text-slate-100 font-medium">O'Scour</span>
+      <span class="text-slate-900 dark:text-slate-100 font-medium" data-i18n="projects.oscour.breadcrumb.current">O'Scour</span>
     </div>
 
     <!-- Hero Banner -->
     <div class="project-hero flex items-center justify-center mb-8">
       <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3">O'Scour</h1>
-        <p class="text-lg text-slate-700 dark:text-slate-300">Jeu d'énigmes web interactif</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="projects.oscour.hero.title">O'Scour</h1>
+        <p class="text-lg text-slate-700 dark:text-slate-300" data-i18n="projects.oscour.hero.subtitle">Jeu d'énigmes web interactif</p>
       </div>
     </div>
 
     <!-- Image projet -->
     <section class="mb-12">
       <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
-        <img src="../assets/img/oscour.jpg" alt="O'Scour screenshot" class="w-full h-auto" />
+        <img src="../assets/img/oscour.jpg" alt="O'Scour screenshot" data-i18n-attr="alt:projects.oscour.image.alt" class="w-full h-auto" />
       </div>
     </section>
 
@@ -76,25 +81,25 @@
     <section class="mb-12">
       <div class="grid md:grid-cols-3 gap-4 mb-8">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Période</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Aout2023</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.oscour.overview.period.label">Période</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.oscour.overview.period.value">Aout2023</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Type</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Jeu web</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.oscour.overview.type.label">Type</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.oscour.overview.type.value">Jeu web</p>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 text-center">
-          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Contexte</p>
-          <p class="text-base font-semibold text-slate-900 dark:text-slate-50">Formation O'Clock</p>
+          <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2" data-i18n="projects.oscour.overview.context.label">Contexte</p>
+          <p class="text-base font-semibold text-slate-900 dark:text-slate-50" data-i18n="projects.oscour.overview.context.value">Formation O'Clock</p>
         </div>
       </div>
 
       <div class="prose prose-slate dark:prose-invert max-w-none">
-        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed mb-4" data-i18n="projects.oscour.overview.description.p1">
           O'Scour est un jeu d'énigmes web réalisé durant ma formation chez O'Clock. 
           Le joueur progresse en résolvant des puzzles et des défis logiques dans une interface simple mais ludique et engageante.
         </p>
-        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed">
+        <p class="text-base text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.oscour.overview.description.p2">
           Le jeu propose une expérience interactive où chaque énigme résolue débloque la suivante, 
           offrant un système de progression qui encourage l'exploration et la réflexion. 
           L'interface est conçue pour être intuitive tout en maintenant l'aspect challenge du gameplay.
@@ -104,35 +109,35 @@
 
     <!-- Stack technique -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Stack technique</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.oscour.stack.title">Stack technique</h2>
       <div class="grid sm:grid-cols-2 gap-6">
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Backend</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.oscour.stack.backend.title">Backend</h3>
           <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
             <div class="flex items-center gap-3">
               <span class="badge-backend">PHP</span>
-              <span class="text-xs">Langage serveur</span>
+              <span class="text-xs" data-i18n="projects.oscour.stack.backend.php">Langage serveur</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-backend">Symfony</span>
-              <span class="text-xs">Framework PHP</span>
+              <span class="text-xs" data-i18n="projects.oscour.stack.backend.symfony">Framework PHP</span>
             </div>
           </div>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Frontend</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="projects.oscour.stack.frontend.title">Frontend</h3>
           <div class="space-y-3 text-sm text-slate-700 dark:text-slate-200">
             <div class="flex items-center gap-3">
               <span class="badge-frontend">HTML5</span>
-              <span class="text-xs">Structure</span>
+              <span class="text-xs" data-i18n="projects.oscour.stack.frontend.html">Structure</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-frontend">CSS3</span>
-              <span class="text-xs">Styles</span>
+              <span class="text-xs" data-i18n="projects.oscour.stack.frontend.css">Styles</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="badge-frontend">JavaScript</span>
-              <span class="text-xs">Interactivité</span>
+              <span class="text-xs" data-i18n="projects.oscour.stack.frontend.js">Interactivité</span>
             </div>
           </div>
         </div>
@@ -141,28 +146,28 @@
 
     <!-- Features principales -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Fonctionnalités principales</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.oscour.features.title">Fonctionnalités principales</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
           <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-            <span class="text-xl">🧩</span> Système d'énigmes
+            <span class="text-xl">🧩</span> <span data-i18n="projects.oscour.features.puzzle.title">Système d'énigmes</span>
           </h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• Série d'énigmes progressives</li>
-            <li>• Défis logiques variés</li>
-            <li>• Système de validation des réponses</li>
-            <li>• Indices et aide contextuelle</li>
+            <li data-i18n="projects.oscour.features.puzzle.item1">• Série d'énigmes progressives</li>
+            <li data-i18n="projects.oscour.features.puzzle.item2">• Défis logiques variés</li>
+            <li data-i18n="projects.oscour.features.puzzle.item3">• Système de validation des réponses</li>
+            <li data-i18n="projects.oscour.features.puzzle.item4">• Indices et aide contextuelle</li>
           </ul>
         </div>
         <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6">
           <h3 class="text-base font-semibold mb-3 text-slate-900 dark:text-slate-50 flex items-center gap-2">
-            <span class="text-xl">🎮</span> Expérience de jeu
+            <span class="text-xl">🎮</span> <span data-i18n="projects.oscour.features.game.title">Expérience de jeu</span>
           </h3>
           <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
-            <li>• Interface ludique et intuitive</li>
-            <li>• Progression sauvegardée</li>
-            <li>• Feedback visuel instantané</li>
-            <li>• Design responsive</li>
+            <li data-i18n="projects.oscour.features.game.item1">• Interface ludique et intuitive</li>
+            <li data-i18n="projects.oscour.features.game.item2">• Progression sauvegardée</li>
+            <li data-i18n="projects.oscour.features.game.item3">• Feedback visuel instantané</li>
+            <li data-i18n="projects.oscour.features.game.item4">• Design responsive</li>
           </ul>
         </div>
       </div>
@@ -170,13 +175,14 @@
 
     <!-- Vidéo démonstration -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Démonstration</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.oscour.demo.title">Démonstration</h2>
       <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg">
         <div class="relative" style="padding-bottom: 56.25%; height: 0;">
           <iframe 
             class="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/9KFlRwrdzi0" 
-            title="Démonstration O'Scour" 
+            title="Démonstration O'Scour"
+            data-i18n-attr="title:projects.oscour.demo.iframeTitle" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen>
@@ -187,25 +193,25 @@
 
     <!-- Apprentissages -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-6">Ce que j'ai appris</h2>
+      <h2 class="text-2xl font-bold mb-6" data-i18n="projects.oscour.learnings.title">Ce que j'ai appris</h2>
       <div class="space-y-4">
         <div class="rounded-xl border-l-4 border-blue-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Game design web</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.oscour.learnings.item1.title">Game design web</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.oscour.learnings.item1.body">
             Conception d'une expérience de jeu engageante dans un environnement web. 
             Création de mécaniques ludiques, gestion de la progression, et équilibrage de la difficulté des énigmes.
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-green-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Interactivité JavaScript</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.oscour.learnings.item2.title">Interactivité JavaScript</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.oscour.learnings.item2.body">
             Développement d'interactions dynamiques côté client avec JavaScript. 
             Gestion des événements utilisateur, animations, et feedback visuel en temps réel pour une expérience fluide.
           </p>
         </div>
         <div class="rounded-xl border-l-4 border-purple-500 bg-white/70 dark:bg-slate-900/60 p-6">
-          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50">Framework Symfony</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <h3 class="text-base font-semibold mb-2 text-slate-900 dark:text-slate-50" data-i18n="projects.oscour.learnings.item3.title">Framework Symfony</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed" data-i18n="projects.oscour.learnings.item3.body">
             Utilisation de Symfony pour gérer la logique serveur, la validation des réponses, 
             et la persistance des données de progression. Mise en pratique du pattern MVC dans un contexte ludique.
           </p>
@@ -215,10 +221,10 @@
 
     <!-- Navigation -->
     <div class="flex items-center justify-between pt-8 border-t border-slate-200 dark:border-slate-800">
-      <a href="../projects.html" class="btn-ghost">
+      <a href="../projects.html" class="btn-ghost" data-i18n="common.backToProjects">
         ← Retour aux projets
       </a>
-      <a href="../index.html#contact" class="btn-secondary">
+      <a href="../index.html#contact" class="btn-secondary" data-i18n="common.contact">
         Me contacter
       </a>
     </div>
@@ -226,10 +232,11 @@
 
   <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
     <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+      © <span id="year"></span> <span data-i18n="common.footer.copy">Jonas Jungling — Portfolio développeur fullstack</span>
     </p>
   </footer>
 
+  <script src="../assets/translations.js"></script>
   <script src="../assets/script.js"></script>
 </body>
 </html>

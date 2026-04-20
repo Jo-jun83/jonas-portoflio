@@ -2,9 +2,9 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>Jonas Jungling - Développeur Fullstack</title>
+  <title id="page-title" data-i18n="home.meta.title">Jonas Jungling - Développeur Fullstack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio de Jonas Jungling, développeur fullstack formé à Holberton School. Projets, compétences et contact." />
+  <meta name="description" content="Portfolio de Jonas Jungling, développeur fullstack formé à Holberton School. Projets, compétences et contact." data-i18n-attr="content:home.meta.description" />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -33,14 +33,19 @@
         </div>
         <div class="leading-tight">
           <p class="font-semibold text-sm sm:text-base">Jonas Jungling</p>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Développeur Fullstack</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="common.role">Développeur Fullstack</p>
         </div>
       </a>
 
       <div class="flex items-center gap-4">
-        <a href="projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Projets</a>
-        <a href="about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">À propos</a>
-        <a href="#contact" class="hidden sm:inline text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500">Contact</a>
+        <a href="projects.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+        <a href="about.html" class="text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+        <a href="#contact" class="hidden sm:inline text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500" data-i18n="common.nav.contact">Contact</a>
+
+        <div class="lang-toggle" role="group" aria-label="Sélecteur de langue" data-i18n-attr="aria-label:common.languageSwitcher">
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
 
         <!-- Bouton dark mode -->
         <button id="theme-toggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition">
@@ -55,14 +60,14 @@
     <!-- Hero -->
     <section class="flex flex-col md:flex-row gap-10 items-center md:items-start mb-8">
       <div class="flex-1">
-        <p class="text-sm uppercase tracking-[0.2em] text-sky-600 dark:text-sky-400 mb-3 font-semibold">
+        <p class="text-sm uppercase tracking-[0.2em] text-sky-600 dark:text-sky-400 mb-3 font-semibold" data-i18n="home.hero.kicker">
           Développeur Fullstack ·  CDI
         </p>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 leading-tight">
-          Développeur Fullstack<br class="hidden sm:block" />
-          formé à <span class="bg-gradient-to-r from-sky-500 to-purple-500 bg-clip-text text-transparent">Holberton School</span>
+          <span data-i18n="home.hero.title.line1">Développeur Fullstack</span><br class="hidden sm:block" />
+          <span data-i18n="home.hero.title.line2Prefix">formé à</span> <span class="bg-gradient-to-r from-sky-500 to-purple-500 bg-clip-text text-transparent" data-i18n="home.hero.title.school">Holberton School</span>
         </h1>
-        <p class="text-base sm:text-lg text-slate-700 dark:text-slate-200 mb-8 max-w-xl leading-relaxed">
+        <p class="text-base sm:text-lg text-slate-700 dark:text-slate-200 mb-8 max-w-xl leading-relaxed" data-i18n="home.hero.description">
           Reconverti dans le développement web, je construis des applications complètes, 
           du back-end au front-end, avec un vrai souci de qualité, de sécurité et de maintenabilité.
         </p>
@@ -74,7 +79,7 @@
                 <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <span>Me contacter</span>
+            <span data-i18n="common.contact">Me contacter</span>
           </a>
           <a href="projects.html" class="btn-secondary group">
             <span class="icon-arrow-wrapper">
@@ -83,16 +88,16 @@
                 <path d="M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <span>Voir mes projets</span>
+            <span data-i18n="home.hero.cta.projects">Voir mes projets</span>
           </a>
-          <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-ghost group" download>
+          <a href="assets/cv/jonas-jungling-cv-FR.pdf" class="btn-ghost group" download="CV-Jonas-Jungling-FR.pdf" data-i18n-attr="href:common.cv.file;download:common.cv.filename">
             <span class="icon-wrapper">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <span>Télécharger mon CV</span>
+            <span data-i18n="common.cv.download">Télécharger mon CV</span>
           </a>
         </div>
 
@@ -109,21 +114,21 @@
 
       <div class="w-full max-w-xs md:max-w-sm">
         <div class="rounded-2xl border-2 border-slate-200 dark:border-slate-800 bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800/60 shadow-xl p-6">
-          <p class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-[0.2em]">
+          <p class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-[0.2em]" data-i18n="home.summary.title">
             En bref
           </p>
           <ul class="space-y-4 text-sm">
             <li class="flex items-start gap-3">
               <span class="text-xl mt-0.5">💼</span>
-              <span class="text-slate-700 dark:text-slate-200">Recherche <strong class="text-sky-600 dark:text-sky-400">CDI</strong> en développement web / fullstack.</span>
+              <span class="text-slate-700 dark:text-slate-200"><span data-i18n="home.summary.item1.prefix">Recherche </span><strong class="text-sky-600 dark:text-sky-400" data-i18n="home.summary.item1.highlight">CDI</strong><span data-i18n="home.summary.item1.suffix"> en développement web / fullstack.</span></span>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-xl mt-0.5">🏫</span>
-              <span class="text-slate-700 dark:text-slate-200">Formé à <strong>Holberton School</strong> (C, algorithmie, systèmes, web, réseau).</span>
+              <span class="text-slate-700 dark:text-slate-200"><span data-i18n="home.summary.item2.prefix">Formé à </span><strong data-i18n="home.summary.item2.highlight">Holberton School</strong><span data-i18n="home.summary.item2.suffix"> (C, algorithmie, systèmes, web, réseau).</span></span>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-xl mt-0.5">🚀</span>
-              <span class="text-slate-700 dark:text-slate-200">Expérience sur des projets concrets : <strong>MoveBy, Feminapedia, HBnB, simple_shell, printf</strong>, etc.</span>
+              <span class="text-slate-700 dark:text-slate-200"><span data-i18n="home.summary.item3.prefix">Expérience sur des projets concrets : </span><strong data-i18n="home.summary.item3.highlight">MoveBy, Feminapedia, HBnB, simple_shell, printf</strong><span data-i18n="home.summary.item3.suffix">, etc.</span></span>
             </li>
           </ul>
         </div>
@@ -133,40 +138,40 @@
     <!-- Compétences -->
     <section class="section-spacing" id="skills">
       <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl sm:text-3xl font-bold">Compétences</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold" data-i18n="home.skills.title">Compétences</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 hover:shadow-lg transition-shadow duration-200">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Langages & Web</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="home.skills.languages.title">Langages & Web</h3>
           <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-2 leading-relaxed">
-            <li>• C, JavaScript, PHP, SQL, Bash</li>
-            <li>• HTML5, CSS3, Tailwind CSS</li>
-            <li>• Notions : TypeScript (selon projets), Python</li>
+            <li data-i18n="home.skills.languages.item1">• C, JavaScript, PHP, SQL, Bash</li>
+            <li data-i18n="home.skills.languages.item2">• HTML5, CSS3, Tailwind CSS</li>
+            <li data-i18n="home.skills.languages.item3">• Notions : TypeScript (selon projets), Python</li>
           </ul>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 hover:shadow-lg transition-shadow duration-200">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Frameworks & Outils</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="home.skills.tools.title">Frameworks & Outils</h3>
           <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-2 leading-relaxed">
-            <li>• Flask, React / Next.js</li>
-            <li>• MySQL</li>
-            <li>• Git, GitHub, Docker, Linux</li>
-            <li>• Netlify (hébergement statique)</li>
+            <li data-i18n="home.skills.tools.item1">• Flask, React / Next.js</li>
+            <li data-i18n="home.skills.tools.item2">• MySQL</li>
+            <li data-i18n="home.skills.tools.item3">• Git, GitHub, Docker, Linux</li>
+            <li data-i18n="home.skills.tools.item4">• Netlify (hébergement statique)</li>
           </ul>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 hover:shadow-lg transition-shadow duration-200">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Backend & API</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="home.skills.backend.title">Backend & API</h3>
           <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-2 leading-relaxed">
-            <li>• Conception et développement d’API REST</li>
-            <li>• Authentification (JWT), gestion des rôles</li>
-            <li>• Organisation en architecture claire et maintenable</li>
+            <li data-i18n="home.skills.backend.item1">• Conception et développement d’API REST</li>
+            <li data-i18n="home.skills.backend.item2">• Authentification (JWT), gestion des rôles</li>
+            <li data-i18n="home.skills.backend.item3">• Organisation en architecture claire et maintenable</li>
           </ul>
         </div>
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-6 hover:shadow-lg transition-shadow duration-200">
-          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50">Fondamentaux & Systèmes</h3>
+          <h3 class="text-base font-bold mb-4 text-slate-900 dark:text-slate-50" data-i18n="home.skills.systems.title">Fondamentaux & Systèmes</h3>
           <ul class="text-sm text-slate-700 dark:text-slate-200 space-y-2 leading-relaxed">
-            <li>• Programmation bas niveau en C</li>
-            <li>• Notions de réseau : TCP/IP, modèle OSI</li>
-            <li>• Environnements Linux / Shell</li>
+            <li data-i18n="home.skills.systems.item1">• Programmation bas niveau en C</li>
+            <li data-i18n="home.skills.systems.item2">• Notions de réseau : TCP/IP, modèle OSI</li>
+            <li data-i18n="home.skills.systems.item3">• Environnements Linux / Shell</li>
           </ul>
         </div>
       </div>
@@ -175,9 +180,9 @@
     <!-- Projets mis en avant -->
     <section class="mt-14">
       <div class="flex items-center justify-between mb-4">
-        <h2 class="text-xl font-semibold">Projets récents</h2>
+        <h2 class="text-xl font-semibold" data-i18n="home.recent.title">Projets récents</h2>
         <a href="projects.html" class="link-inline group text-sm">
-          <span>Voir tous les projets</span>     
+          <span data-i18n="home.recent.viewAll">Voir tous les projets</span>
         </a>
       </div>
 
@@ -187,8 +192,8 @@
           <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 flex flex-col justify-between hover:shadow-lg transition-shadow duration-200">
             <div>
               <h3 class="font-semibold text-lg mb-1">MoveBy</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">2026 · SaaS multi-coachs</p>
-              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-2" data-i18n="home.recent.cards.moveby.meta">2026 · SaaS multi-coachs</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3" data-i18n="home.recent.cards.moveby.description">
                 Plateforme SaaS pour coachs sportifs : gestion multi-comptes, réservation et paiement en ligne (Stripe), back-offices dédiés, architecture scalable et sécurisée.
               </p>
             </div>
@@ -207,8 +212,8 @@
           <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-5 flex flex-col justify-between hover:shadow-lg transition-shadow duration-200">
             <div>
               <h3 class="font-semibold text-lg mb-1">Feminapedia</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Décembre 2025 · Site vitrine</p>
-              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-2" data-i18n="home.recent.cards.feminapedia.meta">Décembre 2025 · Site vitrine</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3" data-i18n="home.recent.cards.feminapedia.description">
                 Site vitrine réalisé pour deux kinésithérapeutes : pages de présentation, services, prise de contact via formulaire,
                 et optimisation responsive. Focus sur lisibilité, accessibilité et conversion.
               </p>
@@ -226,11 +231,10 @@
 
     <!-- Contact -->
     <section id="contact" class="section-spacing mt-16">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-6">Contact</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6" data-i18n="home.contact.title">Contact</h2>
       <div class="rounded-2xl border-2 border-sky-200 dark:border-sky-900 bg-gradient-to-br from-sky-50 to-white dark:from-slate-900 dark:to-slate-800 p-8 shadow-xl">
         <p class="text-base text-slate-700 dark:text-slate-200 mb-6 leading-relaxed">
-          <strong>Disponible immédiatement</strong> pour un CDI en développement fullstack. 
-          Basé en France, ouvert au télétravail et aux opportunités hybrides.
+          <strong data-i18n="home.contact.availability.highlight">Disponible immédiatement</strong><span data-i18n="home.contact.availability.suffix"> pour un CDI en développement fullstack. Basé en France, ouvert au télétravail et aux opportunités hybrides.</span>
         </p>
         <div class="space-y-4 text-sm text-slate-700 dark:text-slate-200">
           <p class="flex items-center gap-3">
@@ -248,7 +252,7 @@
                 <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <a href="https://www.linkedin.com/in/jonas-jungling" target="_blank" class="link-contact">Profil LinkedIn</a>
+            <a href="https://www.linkedin.com/in/jonas-jungling" target="_blank" class="link-contact" data-i18n="home.contact.linkedin">Profil LinkedIn</a>
           </p>
           <p class="flex items-center gap-3">
             <span class="contact-icon">
@@ -260,14 +264,14 @@
           </p>
         </div>
         <div class="mt-8 pt-6 border-t border-sky-200 dark:border-sky-900">
-          <a href="assets/cv/jonas-jungling-cv.pdf" class="btn-primary group" download>
+          <a href="assets/cv/jonas-jungling-cv-FR.pdf" class="btn-primary group" download="CV-Jonas-Jungling-FR.pdf" data-i18n-attr="href:common.cv.file;download:common.cv.filename">
             <span class="icon-wrapper">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <span>Télécharger mon CV</span>
+            <span data-i18n="common.cv.download">Télécharger mon CV</span>
           </a>
         </div>
       </div>
@@ -276,15 +280,16 @@
 
   <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-6 text-center">
     <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      © <span id="year"></span> Jonas Jungling — Portfolio développeur fullstack
+      © <span id="year"></span> <span data-i18n="common.footer.copy">Jonas Jungling — Portfolio développeur fullstack</span>
     </p>
     <div class="flex items-center justify-center gap-4 text-xs">
-      <a href="projects.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Projets</a>
-      <a href="about.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">À propos</a>
-      <a href="#contact" class="text-slate-500 dark:text-slate-400 hover:text-sky-500">Contact</a>
+      <a href="projects.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500" data-i18n="common.nav.projects">Projets</a>
+      <a href="about.html" class="text-slate-500 dark:text-slate-400 hover:text-sky-500" data-i18n="common.nav.about">À propos</a>
+      <a href="#contact" class="text-slate-500 dark:text-slate-400 hover:text-sky-500" data-i18n="common.nav.contact">Contact</a>
     </div>
   </footer>
 
+  <script src="assets/translations.js"></script>
   <script src="assets/script.js"></script>
 </body>
 </html>
