@@ -132,6 +132,21 @@ function initLanguageToggle() {
 // ===============================
 // Theme
 // ===============================
+function updateThemeLogos(theme) {
+  const logos = document.querySelectorAll("[data-logo-light][data-logo-dark]");
+
+  logos.forEach((logo) => {
+    const lightSrc = logo.getAttribute("data-logo-light");
+    const darkSrc = logo.getAttribute("data-logo-dark");
+
+    if (!lightSrc || !darkSrc) {
+      return;
+    }
+
+    logo.setAttribute("src", theme === "dark" ? darkSrc : lightSrc);
+  });
+}
+
 function setTheme(theme) {
   if (theme === "dark") {
     root.classList.add("dark");
@@ -150,6 +165,8 @@ function setTheme(theme) {
       darkIcon.classList.remove("hidden");
     }
   }
+
+  updateThemeLogos(theme);
 }
 
 (function initTheme() {
