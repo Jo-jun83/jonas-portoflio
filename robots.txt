@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jonas-jungling.netlify.app/sitemap.xml

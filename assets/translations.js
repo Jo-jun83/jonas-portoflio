@@ -1296,3 +1296,24 @@ window.translations = {
     },
   },
 };
+
+window.translations.fr.projects.simpleShell.links.githubLabel = "Voir sur GitHub";
+window.translations.es.projects.simpleShell.links.githubLabel = "Ver en GitHub";
+window.translations.fr.projects.printf.overview.description = {
+  p1: "Ce projet consiste à recréer la fonction C standard printf en partant de zéro. Il s’agit d’une implémentation bas niveau nécessitant une compréhension approfondie de la mémoire, des arguments variadiques et du parsing.",
+  p2: "Le projet gère plusieurs spécificateurs de format, utilise va_list pour les arguments variadiques et un système de dispatch pour traiter chaque format. Une page de manuel documente la fonction."
+};
+window.translations.es.projects.printf.overview.description = {
+  p1: "Este proyecto consiste en recrear desde cero la función estándar printf de C. Es una implementación de bajo nivel que requiere comprender la memoria, los argumentos variádicos y el análisis de cadenas.",
+  p2: "El proyecto gestiona varios especificadores de formato, utiliza va_list para los argumentos variádicos y un sistema de dispatch para tratar cada formato. Una página de manual documenta la función."
+};
+window.translations.fr.projects.printf.features.specs.item1 = "• %c : caractère unique";
+window.translations.fr.projects.printf.features.specs.item2 = "• %s : chaîne de caractères";
+window.translations.fr.projects.printf.features.specs.item3 = "• %d / %i : entiers signés";
+window.translations.fr.projects.printf.features.specs.item4 = "• %% : caractère %";
+window.translations.es.projects.printf.features.specs.item1 = "• %c: carácter único";
+window.translations.es.projects.printf.features.specs.item2 = "• %s: cadena de caracteres";
+window.translations.es.projects.printf.features.specs.item3 = "• %d / %i: enteros con signo";
+window.translations.es.projects.printf.features.specs.item4 = "• %%: carácter %";
+window.translations.fr.projects.printf.learnings.item2.body = "Maîtrise des fonctions variadiques en C avec va_list, va_start, va_arg et va_end, ainsi que de la gestion dynamique d’arguments de types différents.";
+window.translations.es.projects.printf.learnings.item2.body = "Uso de funciones variádicas en C con va_list, va_start, va_arg y va_end, además de la gestión dinámica de argumentos de distintos tipos.";
