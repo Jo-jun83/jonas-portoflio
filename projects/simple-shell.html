@@ -19,7 +19,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="preload" href="../assets/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../assets/fonts/ibm-plex-sans-400-600.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../assets/fonts/ibm-plex-mono-500.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body class="project-page bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
   <!-- Navbar -->
@@ -73,7 +73,7 @@
     <!-- Image projet -->
     <section class="mb-12">
       <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl">
-        <img src="../assets/img/simple_shell.png" alt="Simple Shell screenshot" data-i18n-attr="alt:projects.simpleShell.image.alt" class="w-full h-auto" />
+        <img src="../assets/img/simple_shell.png" alt="Simple Shell screenshot" data-i18n-attr="alt:projects.simpleShell.image.alt" class="w-full h-auto" / width="1024" height="228" loading="lazy" decoding="async">
       </div>
     </section>
 
@@ -205,3 +205,5 @@
   <script src="../assets/script.js"></script>
 </body>
 </html>
+
+
