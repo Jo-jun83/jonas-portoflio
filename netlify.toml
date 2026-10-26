@@ -12,3 +12,19 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# CSS and JavaScript change frequently and must be revalidated on each visit.
+[[headers]]
+  for = "/assets/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/translations.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
