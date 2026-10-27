@@ -1,6 +1,6 @@
 const state={lang:localStorage.getItem("portfolio-lang")||"fr"};
 function nested(source,key){return key.split(".").reduce((value,part)=>value?.[part],source)}
-function setLanguage(lang){state.lang=lang;localStorage.setItem("portfolio-lang",lang);document.documentElement.lang=lang;document.querySelectorAll("[data-fr][data-es]").forEach(el=>el.textContent=el.dataset[lang]);const legacy=typeof translations!=="undefined"?translations:null;if(legacy?.[lang]){document.querySelectorAll("[data-i18n]").forEach(el=>{const value=nested(legacy[lang],el.dataset.i18n);if(typeof value==="string")el.textContent=value});document.querySelectorAll("[data-i18n-attr]").forEach(el=>el.dataset.i18nAttr.split(";").forEach(pair=>{const [attr,key]=pair.split(":");const value=nested(legacy[lang],key);if(value)el.setAttribute(attr,value)}))}document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===lang)));document.querySelectorAll(".cv-link").forEach(a=>{a.href=lang==="es"?(a.getAttribute("href")||"").replace("FR.pdf","ES.pdf"):(a.getAttribute("href")||"").replace("ES.pdf","FR.pdf")})}
+function setLanguage(lang){state.lang=lang;localStorage.setItem("portfolio-lang",lang);document.documentElement.lang=lang;document.querySelectorAll("[data-fr][data-es]").forEach(el=>el.textContent=el.dataset[lang]);document.querySelectorAll("[data-fr-aria-label][data-es-aria-label]").forEach(el=>el.setAttribute("aria-label",el.dataset[`${lang}AriaLabel`]));document.querySelectorAll("[data-fr-alt][data-es-alt]").forEach(el=>el.setAttribute("alt",el.dataset[`${lang}Alt`]));const legacy=typeof translations!=="undefined"?translations:null;if(legacy?.[lang]){document.querySelectorAll("[data-i18n]").forEach(el=>{const value=nested(legacy[lang],el.dataset.i18n);if(typeof value==="string")el.textContent=value});document.querySelectorAll("[data-i18n-attr]").forEach(el=>el.dataset.i18nAttr.split(";").forEach(pair=>{const [attr,key]=pair.split(":");const value=nested(legacy[lang],key);if(value)el.setAttribute(attr,value)}))}document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===lang)));document.querySelectorAll(".cv-link").forEach(a=>{a.href=lang==="es"?(a.getAttribute("href")||"").replace("FR.pdf","ES.pdf"):(a.getAttribute("href")||"").replace("ES.pdf","FR.pdf")})}
 document.addEventListener("DOMContentLoaded",()=>{setLanguage(state.lang);document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLanguage(b.dataset.lang)));document.querySelector(".menu-toggle")?.addEventListener("click",e=>{const open=document.querySelector("#main-nav").classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",open)});document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.querySelectorAll(".project-card").forEach(c=>{const item=c.closest(".project-card-link")||c;item.hidden=b.dataset.filter!=="all"&&!c.dataset.category.split(" ").includes(b.dataset.filter)})}));const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll(".reveal").forEach(el=>io.observe(el));const y=document.querySelector("#year");if(y)y.textContent=new Date().getFullYear()});
 function normalizeProjectLabels(){document.querySelectorAll(".project-card .text-link").forEach(link=>link.textContent=state.lang==="fr"?"Voir le projet →":"Ver el proyecto →")}
 document.addEventListener("DOMContentLoaded",()=>{normalizeProjectLabels();document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener("click",normalizeProjectLabels))});
@@ -11,36 +11,43 @@ const PAGE_TITLES={
 };
 function updatePageTitle(){const page=location.pathname.split("/").pop()||"index.html";const title=PAGE_TITLES[page];if(title)document.title=title[state.lang]}
 document.addEventListener("DOMContentLoaded",()=>{updatePageTitle();document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener("click",updatePageTitle))});
-function initAgentScene(){
-  const hero=document.querySelector(".hero"),scene=document.querySelector(".agent-scene"),svg=scene?.querySelector("svg");
-  if(!hero||!scene)return;
-  requestAnimationFrame(()=>hero.classList.add("hero-ready"));
+function initProjectShowcase(){
+  const hero=document.querySelector(".hero"),showcase=document.querySelector("[data-project-showcase]");
+  if(hero)requestAnimationFrame(()=>hero.classList.add("hero-ready"));
+  if(!showcase)return;
   const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const coarse=matchMedia("(pointer: coarse)").matches;
+  const finePointer=matchMedia("(hover: hover) and (pointer: fine)").matches;
   const lowMemory=typeof navigator.deviceMemory==="number"&&navigator.deviceMemory<4;
-  const sceneObserver=new IntersectionObserver(([entry])=>{
-    scene.classList.toggle("in-view",entry.isIntersecting);
-    if(svg&&typeof svg.pauseAnimations==="function"&&typeof svg.unpauseAnimations==="function"){
-      entry.isIntersecting&&!reduced?svg.unpauseAnimations():svg.pauseAnimations();
-    }
-  },{threshold:.12});
-  sceneObserver.observe(scene);
-  if(reduced||coarse||lowMemory)return;
+  if(reduced||!finePointer||lowMemory)return;
+  const windows=[...showcase.querySelectorAll("[data-depth]")];
   let frame=0;
-  scene.addEventListener("pointermove",event=>{
+  const reset=()=>{
+    showcase.style.setProperty("--showcase-rx","0deg");
+    showcase.style.setProperty("--showcase-ry","0deg");
+    windows.forEach(windowElement=>{
+      windowElement.style.setProperty("--shift-x","0px");
+      windowElement.style.setProperty("--shift-y","0px");
+    });
+  };
+  showcase.addEventListener("pointermove",event=>{
     if(frame)return;
     frame=requestAnimationFrame(()=>{
-      const rect=scene.getBoundingClientRect();
+      const rect=showcase.getBoundingClientRect();
       const x=(event.clientX-rect.left)/rect.width-.5;
       const y=(event.clientY-rect.top)/rect.height-.5;
-      scene.style.setProperty("--scene-x",`${x*2.8}deg`);
-      scene.style.setProperty("--scene-y",`${y*-2.2}deg`);
+      showcase.style.setProperty("--showcase-rx",`${y*-1.4}deg`);
+      showcase.style.setProperty("--showcase-ry",`${x*1.8}deg`);
+      windows.forEach(windowElement=>{
+        const depth=Number(windowElement.dataset.depth)||1;
+        windowElement.style.setProperty("--shift-x",`${x*12*depth}px`);
+        windowElement.style.setProperty("--shift-y",`${y*9*depth}px`);
+      });
       frame=0;
     });
   },{passive:true});
-  scene.addEventListener("pointerleave",()=>{scene.style.setProperty("--scene-x","0deg");scene.style.setProperty("--scene-y","0deg")});
+  showcase.addEventListener("pointerleave",reset);
 }
-document.addEventListener("DOMContentLoaded",initAgentScene);
+document.addEventListener("DOMContentLoaded",initProjectShowcase);
 function initCinematicSections(){
   const elements=document.querySelectorAll(".section-head,.timeline li,.about-copy section,.contact-inner");
   if(!elements.length)return;
