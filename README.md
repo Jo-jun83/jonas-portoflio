@@ -1,4 +1,4 @@
-# 🌐 Portfolio — *Jonas Jungling*
+# 🌐 Portfolio — _Jonas Jungling_
 
 Bienvenue sur mon portfolio personnel.  
 Ce site présente mon parcours, mes projets ainsi que mes compétences en développement web.
@@ -13,29 +13,29 @@ Je suis **Jonas Jungling**, développeur fullstack formé à Holberton School, a
 J’aime concevoir des applications de bout en bout : architecture backend, API REST, sécurité (JWT), base de données, front responsive.
 
 🎯 Objectif actuel : **alternance ou CDI en développement web / fullstack**  
-📍 Basé à Saint-Raphaël — ouvert au télétravail  
+📍 Basé à Saint-Raphaël — ouvert au télétravail
 
 ---
 
 ## 🚀 Pages du site
 
-| Page | Description |
-|------|-------------|
-| `index.html` | Accueil, compétences, call-to-action & liens directs |
+| Page            | Description                                                    |
+| --------------- | -------------------------------------------------------------- |
+| `index.html`    | Accueil, compétences, call-to-action & liens directs           |
 | `projects.html` | Tous les projets détaillés avec stack & difficultés techniques |
-| `about.html` | Présentation personnelle, parcours, reconversion & valeurs |
-| `assets/` | CSS, JS, media & fichier PDF du CV |
+| `about.html`    | Présentation personnelle, parcours, reconversion & valeurs     |
+| `assets/`       | CSS, JS, media & fichier PDF du CV                             |
 
 ---
 
 ## 🛠️ Stack utilisée
 
-| Catégorie | Technologies |
-|---|---|
-| **Front-end** | HTML5 · TailwindCSS · JavaScript |
+| Catégorie                          | Technologies                                |
+| ---------------------------------- | ------------------------------------------- |
+| **Front-end**                      | HTML5 · TailwindCSS · JavaScript            |
 | **Backend (présenté via projets)** | Flask · MySQL · SQLAlchemy · JWT · API REST |
-| **Bas niveau** | C · Shell |
-| **Outils** | Git · Docker · Linux · Netlify |
+| **Bas niveau**                     | C · Shell                                   |
+| **Outils**                         | Git · Docker · Linux · Netlify              |
 
 Ce portfolio est statique → aucun serveur requis.
 
@@ -43,22 +43,22 @@ Ce portfolio est statique → aucun serveur requis.
 
 ## 📂 Projets présentés
 
-| Projet | Description | Stack |
-|---|---|---|
-| **MoveByChloé** | Plateforme de réservation avec back-office & espace coach | Flask · MySQL · Next.js · JWT |
-| **HBnB** | Mini-Airbnb avec API REST & relations complexes | Flask · SQLAlchemy · ORM |
-| **Simple Shell** | Reproduction d’un shell UNIX fonctionnel | C · Processus · Fork/exec |
-| **_printf** | Reproduction de la fonction printf en C | C · Variadic functions |
-| **O'Scour** | Jeu d’énigmes web | PHP · Symfony · JS |
-| **O'Flix** | Application catalogue films/séries | PHP · Symfony |
+| Projet           | Description                                               | Stack                         |
+| ---------------- | --------------------------------------------------------- | ----------------------------- |
+| **MoveByChloé**  | Plateforme de réservation avec back-office & espace coach | Flask · MySQL · Next.js · JWT |
+| **HBnB**         | Mini-Airbnb avec API REST & relations complexes           | Flask · SQLAlchemy · ORM      |
+| **Simple Shell** | Reproduction d’un shell UNIX fonctionnel                  | C · Processus · Fork/exec     |
+| **\_printf**     | Reproduction de la fonction printf en C                   | C · Variadic functions        |
+| **O'Scour**      | Jeu d’énigmes web                                         | PHP · Symfony · JS            |
+| **O'Flix**       | Application catalogue films/séries                        | PHP · Symfony                 |
 
 ---
 
 ## 📬 Contact
 
-📧 **jonas.jungling@holbertonstudents.com**  
+📧 **jjo1367@gmail.com**  
 🔗 LinkedIn : https://www.linkedin.com/in/jonas-jungling  
-🐙 GitHub : https://github.com/Jo-jun83  
+🐙 GitHub : https://github.com/Jo-jun83
 
 Si mon profil vous intéresse, j’échange volontiers.
 
